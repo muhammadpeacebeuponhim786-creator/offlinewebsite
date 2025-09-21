@@ -15,21 +15,25 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px;
-      background: #006400; /* dark green bar */
+      background: #004d00; /* dark green bar */
       color: white;
     }
     header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 60px; /* Main heading size */
+      color: yellow;   /* Heading color */
     }
     header .contact {
-      font-size: 16px;
+      font-size: 30px; /* Contact number size */
+      color: lightyellow;
+      font-weight: bold;
     }
     .centered {
       text-align: center;
-      font-size: 22px;
+      font-size: 30px; /* Centered line size */
       font-weight: bold;
       margin: 20px 0;
+      color: navy;
     }
     table {
       width: 100%;
@@ -39,14 +43,20 @@
       color: black;
     }
     table th, table td {
-      border: 1px solid #333;
-      padding: 6px;
+      border: 2px solid #333;
+      padding: 10px;
       text-align: center;
-      font-size: 14px;
+      font-size: 30px; /* Table text size */
     }
     table th {
-      background: #006400;
+      background: #004d00;
       color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #e6ffe6; /* light green rows */
+    }
+    tr:nth-child(odd) {
+      background-color: #ffffff; /* white rows */
     }
   </style>
 </head>
@@ -93,27 +103,7 @@
       <td>200</td><td>MLITE-1</td><td>771</td><td>1000</td>
       <td>58</td><td>GRAVIBNAN-INJ 2ML</td><td>565</td><td>661</td>
     </tr>
-    <tr>
-      <td>211</td><td>D-GEST</td><td>41</td><td>50</td>
-      <td>222</td><td>DIANE 35</td><td>26</td><td>31</td>
-    </tr>
-    <tr>
-      <td>213</td><td>ENZ-10</td><td>63</td><td>88</td>
-      <td>33</td><td>LIQUID PARFEEN</td><td>54</td><td>150</td>
-    </tr>
-    <tr>
-      <td>218</td><td>ENZ-10 50 MG</td><td>33</td><td>48</td>
-      <td>34</td><td>BSR TEST</td><td>32</td><td>100</td>
-    </tr>
-    <tr>
-      <td>14</td><td>SYNTO INJ</td><td>7</td><td>12</td>
-      <td>11</td><td>LONTUR LOTION</td><td>100</td><td>230</td>
-    </tr>
-    <tr>
-      <td>15</td><td>SURGICAL GLOVES NO 7</td><td>195</td><td>250</td>
-      <td>35</td><td>DOVRIN DS TAB</td><td>13</td><td>23</td>
-    </tr>
-    <!-- You can continue adding more rows from your list -->
+    <!-- Add more rows as needed -->
   </table>
 
 </body>
