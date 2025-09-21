@@ -1,110 +1,43 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
 <head>
-  <title>Fazal Din Memorial Gynae Hospital</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAZAL DIN MEMORIAL GYNAE HOSPITAL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #7CFC00; /* parrot green */
-      font-family: Arial, sans-serif;
-      color: skyblue;
-      margin: 0;
-      padding: 0;
+    body{
+      margin:0;
+      font-family:Inter, system-ui, sans-serif;
+      background:linear-gradient(135deg,#eaf6ff,#fff8f0);
+      padding:24px;
+      color:#334155;
     }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background: #004d00; /* dark green bar */
-      color: white;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 60px; /* Main heading size */
-      color: yellow;   /* Heading color */
-    }
-    header .contact {
-      font-size: 30px; /* Contact number size */
-      color: lightyellow;
-      font-weight: bold;
-    }
-    .centered {
-      text-align: center;
-      font-size: 30px; /* Centered line size */
-      font-weight: bold;
-      margin: 20px 0;
-      color: navy;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      background: white;
-      color: black;
-    }
-    table th, table td {
-      border: 2px solid #333;
-      padding: 10px;
-      text-align: center;
-      font-size: 30px; /* Table text size */
-    }
-    table th {
-      background: #004d00;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background-color: #e6ffe6; /* light green rows */
-    }
-    tr:nth-child(odd) {
-      background-color: #ffffff; /* white rows */
-    }
+    .container{max-width:1200px;margin:0 auto;background:white;padding:32px;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.1)}
+    h1{font-size:60px;color:#0b63ff;margin:0 0 20px 0;}
+    .contact,.tagline,.address{font-size:35px;margin:6px 0;}
+    .contact{color:#334155;font-weight:600}
+    .tagline{color:#ff6b6b;font-weight:700;text-transform:uppercase}
+    .address{color:#0b63ff;font-weight:600}
+    h2{margin-top:40px;color:#0b63ff;border-bottom:3px solid #0b63ff;display:inline-block;padding-bottom:4px}
+    table{width:100%;border-collapse:collapse;margin-top:10px;}
+    th,td{padding:8px 10px;border:1px solid #e2e8f0;text-align:left;}
+    th{background:#f1f5f9;color:#07316a}
+    tr:nth-child(even){background:#f9fafb}
   </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
+  <div class="container">
     <h1>FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
-    <div class="contact">SAEED AHMAD 📞 0300-4461365</div>
-  </header>
+    <p class="contact">Contact : SAEED AHMAD 0300-4461365</p>
+    <p class="tagline">WE PROVIDE CARE FOR YOUR NEW BORN</p>
+    <p class="address">College Road Narowal</p><!-- Items Sections from Excel -->
+<div class="items">
 
-  <!-- Centered Line -->
-  <div class="centered">WE PROVIDE TO YOUR NEW BORN</div>
+" + full_items_html + "
 
-  <!-- Table -->
-  <table>
-    <tr>
-      <th>Code</th>
-      <th>Item Name</th>
-      <th>Pur. Rate</th>
-      <th>Sale Rate</th>
-      <th>Code</th>
-      <th>Item Name</th>
-      <th>Pur. Rate</th>
-      <th>Sale Rate</th>
-    </tr>
-    <tr>
-      <td>10</td><td>DUPHASTON</td><td>54</td><td>63</td>
-      <td>30</td><td>PYODINE 30ML BROOKS</td><td>107</td><td>150</td>
-    </tr>
-    <tr>
-      <td>182</td><td>IBRET FOLIC 500 GRADUMET</td><td>10</td><td>11</td>
-      <td>190</td><td>PYODINE 60ML</td><td>214</td><td>250</td>
-    </tr>
-    <tr>
-      <td>196</td><td>T-T- INJ</td><td>25</td><td>180</td>
-      <td>32</td><td>PRIMULATA N TAB</td><td>12</td><td>14</td>
-    </tr>
-    <tr>
-      <td>199</td><td>SURGICAL TAPE KIT</td><td>27</td><td>50</td>
-      <td>57</td><td>GRAVIBNAN INJ 1 ML</td><td>246</td><td>290</td>
-    </tr>
-    <tr>
-      <td>200</td><td>MLITE-1</td><td>771</td><td>1000</td>
-      <td>58</td><td>GRAVIBNAN-INJ 2ML</td><td>565</td><td>661</td>
-    </tr>
-    <!-- Add more rows as needed -->
-  </table>
-
+</div>
+  </div>
 </body>
 </html>
