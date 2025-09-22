@@ -1,166 +1,138 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FAZAL DIN MEMORIAL GYNAE HOSPITAL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fazal Din Memorial Gynae Hospital</title>
   <style>
-    body {
-      margin:0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background:#d9fdd3; /* full light green */
-      padding:20px;
-      color:#1e293b;
-    }
-    .container {
-      max-width:1200px;
-      margin:0 auto;
-      background:#ffffffee;
-      padding:30px;
-      border-radius:15px;
-      box-shadow:0 4px 16px rgba(0,0,0,0.15);
-    }
-    .header {
-      text-align:center;
-      margin-bottom:15px;
-    }
-    h1 {
-      font-size:60px;
-      color:#065f46;
-      margin:10px 0;
-      font-weight:800;
-      text-transform:uppercase;
-    }
-    .contact {
-      font-size:30px;
-      color:#0f172a;
-      font-weight:600;
-      text-align:left;
-      margin:10px 0;
-    }
-    .tagline {
-      font-size:30px;
-      text-align:center;
-      color:#065f46;
-      font-style:italic;
-      font-weight:600;
-      margin:15px 0;
-    }
-    .address {
-      font-size:30px;
-      text-align:center;
-      color:#0f766e;
-      font-weight:600;
-      margin-bottom:30px;
-    }
-    h2 {
-      margin-top:30px;
-      color:#065f46;
-      border-left:8px solid #34d399;
-      padding-left:12px;
-      font-size:28px;
-      text-transform:uppercase;
-    }
-    table {
-      width:100%;
-      border-collapse:collapse;
-      margin:15px 0 35px 0;
-      font-size:20px;
-    }
-    th, td {
-      padding:12px 15px;
-      border:1px solid #cbd5e1;
-      text-align:left;
-    }
-    th {
-      background:#bbf7d0;
-      color:#064e3b;
-      font-weight:700;
-    }
-    tr:nth-child(even) { background:#f0fdf4; }
+    :root{
+      --bg: #f3fff3; /* very light green background */
+      --red: #cc0000;
+      --blue: #0b56d6;
+      --pink: #ff66b2;
+      --sky: #57c7ff;
+      --light-gray: #f7f7f7;
+      --text: #111;
+      --container-max: 900px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }html,body{height:100%;margin:0;background:var(--bg);color:var(--text)}
+
+.page{
+  max-width:var(--container-max);
+  margin:28px auto;
+  background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.95));
+  border-radius:12px;
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  padding:28px;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+/* Main heading */
+h1.main-heading{
+  color:var(--red);
+  font-size:60px; /* requested */
+  line-height:0.95;
+  margin:0;
+  font-weight:700;
+  letter-spacing:0.6px;
+}
+
+/* Left column item (Saeed Ahmad and phone) */
+.left-sidebar{
+  flex:0 0 260px;
+  text-align:left;
+}
+.left-sidebar .name{
+  color:var(--blue);
+  font-size:35px; /* requested */
+  margin:0 0 6px 0;
+  font-weight:600;
+}
+.left-sidebar .phone{
+  color:var(--blue);
+  font-size:18px;
+  margin:0;
+  opacity:0.9;
+}
+
+/* Details block (center/right) */
+.details{
+  flex:1 1 540px;
+  padding-left:12px;
+}
+
+.admin{
+  color:var(--pink);
+  font-size:30px; /* requested */
+  margin:6px 0;
+  font-weight:600;
+}
+
+.consultants{
+  color:var(--sky);
+  font-size:25px; /* requested */
+  margin:6px 0 12px 0;
+  font-weight:600;
+}
+
+.slogan{
+  font-size:35px; /* WE PROVIDE CARE... */
+  margin:18px 0;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.6px;
+}
+
+.address{
+  font-size:20px; /* requested */
+  margin-top:8px;
+  color:#214a21;
+  font-weight:500;
+}
+
+/* small responsive tweaks */
+@media (max-width:720px){
+  .left-sidebar{flex-basis:100%;}
+  .details{flex-basis:100%;padding-left:0}
+  h1.main-heading{font-size:36px}
+  .left-sidebar .name{font-size:26px}
+  .admin{font-size:22px}
+  .consultants{font-size:18px}
+  .slogan{font-size:22px}
+}
+
+/* small footer note */
+footer{margin-top:18px;font-size:13px;color:#444;opacity:0.8}
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
-    </div>
-    <p class="contact">SAEED AHMAD 0300-4461365</p>
-    <p class="tagline">WE PROVIDE CARE FOR YOUR NEW BORN</p>
-    <p class="address">College Road Narowal</p>
+  <div class="page">
+    <header>
+      <div class="left-sidebar" aria-label="Contact">
+        <p class="name">SAEED AHMAD</p>
+        <p class="phone">0300-4461365</p>
+      </div><div class="details">
+    <h1 class="main-heading">FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
+    <p class="admin">Administrator : Dr. Sheeba Saeed</p>
+    <p class="consultants">Consultant : Dr. Human Sajawal , Dr. Abeera Azmat</p>
+    <p class="slogan">WE PROVIDE CARE FOR YOUR NEW BORN</p>
+    <p class="address">Address : - College Road Narowal</p>
+  </div>
+</header>
 
-    <h2>ABBOT</h2>
-    <table>
-      <thead><tr><th>Code</th><th>Item Name</th><th>Pur. Rate</th><th>Sale Rate</th></tr></thead>
-      <tbody>
-        <tr><td>10</td><td>DUPHASTON</td><td>54</td><td>63</td></tr>
-        <tr><td>182</td><td>IBRET FOLIC 500 GRADUMET</td><td>10</td><td>11</td></tr>
-        <tr><td>196</td><td>T-T- INJ</td><td>25</td><td>180</td></tr>
-        <tr><td>199</td><td>SURGICAL TAPE KIT</td><td>27</td><td>50</td></tr>
-        <tr><td>200</td><td>MLITE-1</td><td>771</td><td>1000</td></tr>
-        <tr><td>211</td><td>D-GEST</td><td>41</td><td>50</td></tr>
-        <tr><td>213</td><td>ENZ-10</td><td>63</td><td>88</td></tr>
-        <tr><td>218</td><td>ENZ-10 50 MG</td><td>33</td><td>48</td></tr>
-      </tbody>
-    </table>
+<footer>
+  <small>Prepared for GitHub. Save this file as <code>index.html</code> and push to your repository to host with GitHub Pages.</small>
+</footer>
 
-    <h2>AMROS</h2>
-    <table>
-      <thead><tr><th>Code</th><th>Item Name</th><th>Pur. Rate</th><th>Sale Rate</th></tr></thead>
-      <tbody>
-        <tr><td>14</td><td>SYNTO INJ</td><td>7</td><td>12</td></tr>
-      </tbody>
-    </table>
-
-    <h2>ANSELL</h2>
-    <table>
-      <thead><tr><th>Code</th><th>Item Name</th><th>Pur. Rate</th><th>Sale Rate</th></tr></thead>
-      <tbody>
-        <tr><td>15</td><td>SURGICAL GLOVES NO 7</td><td>195</td><td>250</td></tr>
-        <tr><td>169</td><td>SURGICAL GLOVES NO 7.5</td><td>195</td><td>251</td></tr>
-      </tbody>
-    </table>
-
-    <h2>APSIS</h2>
-    <table>
-      <thead><tr><th>Code</th><th>Item Name</th><th>Pur. Rate</th><th>Sale Rate</th></tr></thead>
-      <tbody>
-        <tr><td>12</td><td>ETT TUBE</td><td>130</td><td>140</td></tr>
-        <tr><td>13</td><td>MOVEGUT SACHET</td><td>28</td><td>44</td></tr>
-        <tr><td>16</td><td>DEXTOL WATER 5%1000ML</td><td>75</td><td>140</td></tr>
-        <tr><td>17</td><td>NS 1000 ML</td><td>68</td><td>130</td></tr>
-        <tr><td>18</td><td>RL 1000 ML</td><td>70</td><td>150</td></tr>
-        <tr><td>19</td><td>RL 500 ML</td><td>60</td><td>120</td></tr>
-      </tbody>
-    </table>
-
-    <h2>ASIAN CONTINENTAL</h2>
-    <table>
-      <thead><tr><th>Code</th><th>Item Name</th><th>Pur. Rate</th><th>Sale Rate</th></tr></thead>
-      <tbody>
-        <tr><td>20</td><td>KOLAC SYP</td><td>230</td><td>282</td></tr>
-        <tr><td>21</td><td>VORAN CAP 50MG</td><td>11</td><td>14</td></tr>
-        <tr><td>180</td><td>RIDOSPA 80MG TAB</td><td>11</td><td>13</td></tr>
-        <tr><td>203</td><td>GRASIRON TAB</td><td>43</td><td>50</td></tr>
-        <tr><td>204</td><td>GRASIRON INJ</td><td>149</td><td>180</td></tr>
-        <tr><td>205</td><td>RIDOSPA INJ</td><td>64</td><td>200</td></tr>
-        <tr><td>206</td><td>MIKCAL SACHET</td><td>71</td><td>100</td></tr>
-        <tr><td>208</td><td>DIGESTINE CAP</td><td>19</td><td>22</td></tr>
-        <tr><td>210</td><td>FERRICURE CAP 150MG</td><td>17</td><td>20</td></tr>
-      </tbody>
-    </table>
-
-    <h2>BAJWA PHARMA</h2>
-    <table>
-      <thead><tr><th>Code</th><th>Item Name</th><th>Pur. Rate</th><th>Sale Rate</th></tr></thead>
-      <tbody>
-        <tr><td>22</td><td>SEDAPHIRINE INJ</td><td>200</td><td>250</td></tr>
-        <tr><td>23</td><td>COVERM INJ</td><td>8</td><td>30</td></tr>
-        <tr><td>109</td><td>ONSET INJ 8GM</td><td>205</td><td>219</td></tr>
-        <tr><td>143</td><td>CATGET NO 1</td><td>117</td><td>300</td></tr>
-        <tr><td>168</td><td>CATGET NO 2</td><td>117</td><td>250</td></tr>
-      </tbody>
-    </table>
   </div>
 </body>
-                   </html>
+</html>
