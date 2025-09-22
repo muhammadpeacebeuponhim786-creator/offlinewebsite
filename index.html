@@ -1,151 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Fazal Din Memorial Gynae Hospital</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #ffffff;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fazal Din Memorial Gynae Hospital</title>
+  <style>
+    :root{
+      --bg: #eaffea; /* very light green */
+      --left-width: 320px;
+      --max-width: 1100px;
+      --card-bg: rgba(255,255,255,0.8);
+      --muted: #333;
+    }
+    html,body{height:100%;margin:0;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--muted);}    
+    .container{max-width:var(--max-width);margin:24px auto;padding:20px;background:var(--card-bg);border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.06);display:flex;gap:20px;align-items:flex-start}
 
-        h1 {
-            color: red;
-            font-size: 60px;
-            text-align: center;
-        }
+    /* left column (contact) */
+    .left{width:var(--left-width);flex:0 0 var(--left-width);}
+    .contact{position:sticky;top:24px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.6);}
+    .contact h2{margin:6px 0;font-size:35px;color:blue;}
 
-        .line2 {
-            color: blue;
-            font-size: 35px;
-            text-align: left;
-            margin-top: 20px;
-        }
+    /* main column */
+    .main{flex:1}
+    header h1{margin:0 0 6px 0;font-size:50px;color:red;letter-spacing:0.5px}
+    header p.admin{margin:4px 0 8px 0;color:pink;font-size:30px}
+    header p.consult{margin:4px 0 12px 0;color:skyblue;font-size:25px}
+    .tagline{text-align:center;font-weight:700;font-size:35px;margin:18px 0}
+    .address{font-size:20px;margin-top:8px}
 
-        .line3 {
-            color: pink;
-            font-size: 30px;
-            margin-top: 10px;
-        }
+    /* dropdown area */
+    .dropdowns{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px}
+    .card{background:rgba(255,255,255,0.85);padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    select{width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;font-size:15px}
 
-        .line4 {
-            color: skyblue;
-            font-size: 25px;
-            margin-top: 10px;
-        }
+    /* footer */
+    footer{margin-top:18px;font-size:13px;color:#444;text-align:center}
 
-        .line5 {
-            font-size: 35px;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .line6 {
-            font-size: 20px;
-            background-color: #e0ffe0;
-            padding: 10px;
-            margin-top: 30px;
-        }
-
-        .dropdown-group {
-            margin-top: 30px;
-        }
-
-        label {
-            font-weight: bold;
-            font-size: 22px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        select {
-            width: 100%;
-            font-size: 18px;
-            padding: 10px;
-        }
-    </style>
+    /* small responsive tweaks */
+    @media (max-width:720px){.container{flex-direction:column}.left{width:100%;flex:auto}.contact{position:relative}}
+  </style>
 </head>
 <body>
+  <div class="container" role="main">
+    <aside class="left">
+      <div class="contact" aria-label="Contact">
+        <h2>SAEED AHMAD<br><small style="font-weight:400;font-size:18px;color:#0a3adb">0300-4461365</small></h2>
+        <p style="margin:8px 0 0;font-size:14px;color:#555">Administrator: <strong style="color:deeppink">Dr. Sheeba Saeed</strong></p>
+        <p style="margin:6px 0 0;font-size:14px;color:#555">Consultants: <strong style="color:skyblue">Dr. Human Sajawal, Dr. Abeera Azmat</strong></p>
+      </div>
+    </aside>
 
-    <!-- Line 1 -->
-    <h1>FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
+    <section class="main">
+      <header>
+        <h1>FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
+        <p class="admin">Administrator : Dr. Sheeba Saeed</p>
+        <p class="consult">Consultant : Dr. Human Sajawal , Dr. Abeera Azmat</p>
+      </header>
 
-    <!-- Line 2 -->
-    <div class="line2">SAEED AHMAD 0300-4461365</div>
+      <div class="tagline">WE PROVIDE CARE FOR YOUR NEW BORN</div>
+      <div class="address">Address: - College Road Narowal</div>
 
-    <!-- Line 3 -->
-    <div class="line3">Administrator : Dr. Sheeba Saeed</div>
+      <section class="dropdowns" aria-label="Pharmacy dropdowns">
+        <div class="card">
+          <label for="abbot">ABBOT</label>
+          <select id="abbot">
+            <option value="">-- Select an item --</option>
+            <option value="10_DUPHASTON">10 &nbsp; DUPHASTON</option>
+            <option value="182_IBRET_FOLIC_500_GRADUMET">182 &nbsp; IBRET FOLIC 500 GRADUMET</option>
+            <option value="196_T-T-INJ">196 &nbsp; T-T- INJ</option>
+            <option value="199_SURGICAL_TAPE_KIT">199 &nbsp; SURGICAL TAPE KIT</option>
+            <option value="200_MLITE-1">200 &nbsp; MLITE-1</option>
+            <option value="211_D-GEST">211 &nbsp; D-GEST</option>
+            <option value="213_ENZ-10">213 &nbsp; ENZ-10</option>
+            <option value="218_ENZ-10_50MG">218 &nbsp; ENZ-10 50MG</option>
+          </select>
+        </div>
 
-    <!-- Line 4 -->
-    <div class="line4">Consultant : Dr. Human Sajawal, Dr. Abeera Azmat</div>
+        <div class="card">
+          <label for="amros">AMROS</label>
+          <select id="amros">
+            <option value="">-- Select an item --</option>
+            <option value="14_SYNTO_INJ">14 &nbsp; SYNTO INJ</option>
+          </select>
+        </div>
 
-    <!-- Line 5 -->
-    <div class="line5">WE PROVIDE CARE FOR YOUR NEW BORN</div>
+        <div class="card">
+          <label for="ansell">ANSELL</label>
+          <select id="ansell">
+            <option value="">-- Select an item --</option>
+            <option value="15_SURGICAL_GLOVES_NO_7">15 &nbsp; SURGICAL GLOVES NO 7</option>
+            <option value="169_SURGICAL_GLOVES_NO_7.5">169 &nbsp; SURGICAL GLOVES NO 7.5</option>
+          </select>
+        </div>
 
-    <!-- Line 6 -->
-    <div class="line6">Address : College Road Narowal</div>
+        <div class="card">
+          <label for="asian">ASIAN CONTINENTAL</label>
+          <select id="asian">
+            <option value="">-- Select an item --</option>
+            <option value="20_KOLAC_SYP">20 &nbsp; KOLAC SYP</option>
+            <option value="21_VORAN_CAP_50MG">21 &nbsp; VORAN CAP 50MG</option>
+            <option value="180_RIDOSPA_80MG_TAB">180 &nbsp; RIDOSPA 80MG TAB</option>
+            <option value="203_GRASIRON_TAB">203 &nbsp; GRASIRON TAB</option>
+            <option value="204_GRASIRON_INJ">204 &nbsp; GRASIRON INJ</option>
+            <option value="205_RIDOSPA_INJ">205 &nbsp; RIDOSPA INJ</option>
+            <option value="206_MIKCAL_SACHET">206 &nbsp; MIKCAL SACHET</option>
+            <option value="208_DIGESTINE_CAP">208 &nbsp; DIGESTINE CAP</option>
+            <option value="210_FERRICURE_CAP_150MG">210 &nbsp; FERRICURE CAP 150MG</option>
+          </select>
+        </div>
 
-    <!-- Line 7 -->
-    <div class="dropdown-group">
-        <label for="abbot">ABBOT</label>
-        <select id="abbot">
-            <option>10 - DUPHASTON - 54 / 63</option>
-            <option>182 - IBRET FOLIC 500 GRADUMET - 10 / 11</option>
-            <option>196 - T-T- INJ - 25 / 180</option>
-            <option>199 - SURGICAL TAPE KIT - 27 / 50</option>
-            <option>200 - MLITE-1 - 771 / 1000</option>
-            <option>211 - D-GEST - 41 / 50</option>
-            <option>213 - ENZ-10 - 63 / 88</option>
-            <option>218 - ENZ-10 50 MG - 33 / 48</option>
-        </select>
-    </div>
+        <div class="card">
+          <label for="misc">MISCELLANEOUS</label>
+          <select id="misc">
+            <option value="">-- Select an item --</option>
+            <option value="sedaphirine_inj">SEDAPHIRINE INJ</option>
+            <option value="coverm_inj">COVERM INJ</option>
+            <option value="onset_inj_8gm">ONSET INJ 8GM</option>
+            <option value="catget_no_1">CATGET NO 1</option>
+            <option value="catget_no_2">CATGET NO 2</option>
+          </select>
+        </div>
 
-    <!-- Line 8 -->
-    <div class="dropdown-group">
-        <label for="amros">AMROS</label>
-        <select id="amros">
-            <option>14 - SYNTO INJ - 7 / 12</option>
-        </select>
-    </div>
+      </section>
 
-    <!-- Line 9 -->
-    <div class="dropdown-group">
-        <label for="ansell">ANSELL</label>
-        <select id="ansell">
-            <option>15 - SURGICAL GLOVES NO 7 - 195 / 250</option>
-            <option>169 - SURGICAL GLOVES NO 7.5 - 195 / 251</option>
-        </select>
-    </div>
+      <footer>
+        Tip: Save this file as <code>index.html</code> and upload to your GitHub repository to publish via GitHub Pages.
+      </footer>
+    </section>
+  </div>
 
-    <!-- Line 10 -->
-    <div class="dropdown-group">
-        <label for="asian">ASIAN CONTINENTAL</label>
-        <select id="asian">
-            <option>20 - KOLAC SYP - 230 / 282</option>
-            <option>21 - VORAN CAP 50MG - 11 / 14</option>
-            <option>180 - RIDOSPA 80MG TAB - 11 / 13</option>
-            <option>203 - GRASIRON TAB - 43 / 50</option>
-            <option>204 - GRASIRON INJ - 149 / 180</option>
-            <option>205 - RIDOSPA INJ - 64 / 200</option>
-            <option>206 - MIKCAL SACHET - 71 / 100</option>
-            <option>208 - DIGESTINE CAP - 19 / 22</option>
-            <option>210 - FERRICURE CAP 150MG - 17 / 20</option>
-        </select>
-    </div>
-
-    <!-- Line 11 -->
-    <div class="dropdown-group">
-        <label for="others">Others</label>
-        <select id="others">
-            <option>SEDAPHIRINE INJ - 200 / 250</option>
-            <option>COVERM INJ - 8 / 30</option>
-            <option>ONSET INJ 8GM - 205 / 219</option>
-            <option>CATGET NO 1 - 117 / 300</option>
-            <option>CATGET NO 2 - 117 / 250</option>
-        </select>
-    </div>
-
+  <script>
+    // small enhancement: show chosen item in console and in a temporary toast
+    function attachToast(sel){
+      sel.addEventListener('change',function(){
+        if(!this.value) return;
+        console.log('Selected',this.value);
+        const t = document.createElement('div');
+        t.textContent = 'Selected: ' + (this.options[this.selectedIndex].text);
+        t.style.position='fixed';t.style.right='18px';t.style.bottom='18px';t.style.background='rgba(0,0,0,0.75)';t.style.color='white';t.style.padding='8px 12px';t.style.borderRadius='8px';t.style.zIndex=9999;
+        document.body.appendChild(t);
+        setTimeout(()=>t.remove(),2200);
+      });
+    }
+    document.querySelectorAll('select').forEach(attachToast);
+  </script>
 </body>
 </html>
