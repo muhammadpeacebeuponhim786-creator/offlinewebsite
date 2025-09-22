@@ -28,16 +28,8 @@
     .tagline{text-align:center;font-weight:700;font-size:35px;margin:18px 0}
     .address{font-size:20px;margin-top:8px}
 
-    /* dropdown area */
-    .dropdowns{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:12px}
-    .card{background:rgba(255,255,255,0.85);padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
-    label{display:block;font-weight:600;margin-bottom:6px}
-    select{width:100%;padding:8px;border-radius:6px;border:1px solid #ccc;font-size:15px}
-
-    /* footer */
     footer{margin-top:18px;font-size:13px;color:#444;text-align:center}
 
-    /* small responsive tweaks */
     @media (max-width:720px){.container{flex-direction:column}.left{width:100%;flex:auto}.contact{position:relative}}
   </style>
 </head>
@@ -61,89 +53,10 @@
       <div class="tagline">WE PROVIDE CARE FOR YOUR NEW BORN</div>
       <div class="address">Address: - College Road Narowal</div>
 
-      <section class="dropdowns" aria-label="Pharmacy dropdowns">
-        <div class="card">
-          <label for="abbot">ABBOT</label>
-          <select id="abbot">
-            <option value="">-- Select an item --</option>
-            <option value="10_DUPHASTON">10 &nbsp; DUPHASTON</option>
-            <option value="182_IBRET_FOLIC_500_GRADUMET">182 &nbsp; IBRET FOLIC 500 GRADUMET</option>
-            <option value="196_T-T-INJ">196 &nbsp; T-T- INJ</option>
-            <option value="199_SURGICAL_TAPE_KIT">199 &nbsp; SURGICAL TAPE KIT</option>
-            <option value="200_MLITE-1">200 &nbsp; MLITE-1</option>
-            <option value="211_D-GEST">211 &nbsp; D-GEST</option>
-            <option value="213_ENZ-10">213 &nbsp; ENZ-10</option>
-            <option value="218_ENZ-10_50MG">218 &nbsp; ENZ-10 50MG</option>
-          </select>
-        </div>
-
-        <div class="card">
-          <label for="amros">AMROS</label>
-          <select id="amros">
-            <option value="">-- Select an item --</option>
-            <option value="14_SYNTO_INJ">14 &nbsp; SYNTO INJ</option>
-          </select>
-        </div>
-
-        <div class="card">
-          <label for="ansell">ANSELL</label>
-          <select id="ansell">
-            <option value="">-- Select an item --</option>
-            <option value="15_SURGICAL_GLOVES_NO_7">15 &nbsp; SURGICAL GLOVES NO 7</option>
-            <option value="169_SURGICAL_GLOVES_NO_7.5">169 &nbsp; SURGICAL GLOVES NO 7.5</option>
-          </select>
-        </div>
-
-        <div class="card">
-          <label for="asian">ASIAN CONTINENTAL</label>
-          <select id="asian">
-            <option value="">-- Select an item --</option>
-            <option value="20_KOLAC_SYP">20 &nbsp; KOLAC SYP</option>
-            <option value="21_VORAN_CAP_50MG">21 &nbsp; VORAN CAP 50MG</option>
-            <option value="180_RIDOSPA_80MG_TAB">180 &nbsp; RIDOSPA 80MG TAB</option>
-            <option value="203_GRASIRON_TAB">203 &nbsp; GRASIRON TAB</option>
-            <option value="204_GRASIRON_INJ">204 &nbsp; GRASIRON INJ</option>
-            <option value="205_RIDOSPA_INJ">205 &nbsp; RIDOSPA INJ</option>
-            <option value="206_MIKCAL_SACHET">206 &nbsp; MIKCAL SACHET</option>
-            <option value="208_DIGESTINE_CAP">208 &nbsp; DIGESTINE CAP</option>
-            <option value="210_FERRICURE_CAP_150MG">210 &nbsp; FERRICURE CAP 150MG</option>
-          </select>
-        </div>
-
-        <div class="card">
-          <label for="misc">MISCELLANEOUS</label>
-          <select id="misc">
-            <option value="">-- Select an item --</option>
-            <option value="sedaphirine_inj">SEDAPHIRINE INJ</option>
-            <option value="coverm_inj">COVERM INJ</option>
-            <option value="onset_inj_8gm">ONSET INJ 8GM</option>
-            <option value="catget_no_1">CATGET NO 1</option>
-            <option value="catget_no_2">CATGET NO 2</option>
-          </select>
-        </div>
-
-      </section>
-
       <footer>
         Tip: Save this file as <code>index.html</code> and upload to your GitHub repository to publish via GitHub Pages.
       </footer>
     </section>
   </div>
-
-  <script>
-    // small enhancement: show chosen item in console and in a temporary toast
-    function attachToast(sel){
-      sel.addEventListener('change',function(){
-        if(!this.value) return;
-        console.log('Selected',this.value);
-        const t = document.createElement('div');
-        t.textContent = 'Selected: ' + (this.options[this.selectedIndex].text);
-        t.style.position='fixed';t.style.right='18px';t.style.bottom='18px';t.style.background='rgba(0,0,0,0.75)';t.style.color='white';t.style.padding='8px 12px';t.style.borderRadius='8px';t.style.zIndex=9999;
-        document.body.appendChild(t);
-        setTimeout(()=>t.remove(),2200);
-      });
-    }
-    document.querySelectorAll('select').forEach(attachToast);
-  </script>
 </body>
 </html>
