@@ -1,130 +1,370 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fazal Din Memorial Gynae Hospital</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fazal Din Memorial Gynae Hospital - Items</title>
   <style>
-    body {
-      background-color: #eaffea; /* Very light green */
-      font-family: Arial, sans-serif;
-      padding: 20px;
+    :root{
+      --bg: #eef9ee; /* very light green background */
+      --container-width: 1100px;
+      --max-select-height: 360px;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
 
-    h1 {
+    .page {
+      max-width: var(--container-width);
+      margin: 36px auto;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    /* Line 1 */
+    .main-heading {
       color: red;
       font-size: 60px;
-      text-align: center;
-      margin-bottom: 0;
+      line-height: 1.05;
+      margin: 0 0 6px 0;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
-    .contact {
+    /* Line 2 - left side of the page */
+    .contact-left {
       color: blue;
       font-size: 35px;
-      text-align: left;
+      margin: 6px 0 12px 0;
+      float: left;
+      clear: left;
+      font-weight: 600;
     }
 
-    .admin {
+    /* Small clearfix for floating content */
+    .clearfix::after{ content:""; display:block; clear:both; }
+
+    /* Line 3 */
+    .administrator {
       color: pink;
       font-size: 30px;
+      margin: 6px 0;
+      font-weight: 600;
     }
 
-    .consultants {
+    /* Line 4 */
+    .consultant {
       color: skyblue;
       font-size: 25px;
+      margin: 6px 0 16px 0;
+      font-weight: 600;
     }
 
-    .slogan {
-      font-size: 35px;
+    /* Line 5 centered */
+    .sub-heading {
       text-align: center;
-      font-weight: bold;
+      font-size: 35px;
+      margin: 16px 0;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
+    /* Line 6 address */
     .address {
       font-size: 20px;
-      margin-bottom: 30px;
+      margin: 8px 0 18px 0;
+      color: #222;
     }
 
-    label {
-      font-size: 25px;
-      font-weight: bold;
+    /* Dropdown / select styling */
+    .dropdown-wrap {
+      margin: 18px 0;
+      display:flex;
+      gap:12px;
+      align-items: flex-start;
+      flex-wrap:wrap;
     }
 
-    select {
+    select.item-select {
+      font-size: 14px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(0,0,0,0.12);
       width: 100%;
-      height: 40px;
-      font-size: 16px;
-      margin-top: 10px;
+      max-width: 760px;
+      height: auto;
+      min-height: 44px;
+      box-sizing: border-box;
+      background: white;
     }
 
-    option {
-      padding: 5px;
+    /* Make the select show a tall scrollable list in modern browsers */
+    select.item-select[size]{
+      overflow:auto;
+      max-height: var(--max-select-height);
     }
 
-    .product-group {
-      font-weight: bold;
-      color: darkgreen;
+    .controls {
+      min-width: 170px;
     }
 
+    .show-table-btn {
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:8px;
+      border: none;
+      cursor:pointer;
+      background:#1976d2;
+      color:white;
+      font-weight:600;
+    }
+
+    /* full items table (hidden by default) */
+    .items-table {
+      margin-top:20px;
+      width:100%;
+      border-collapse:collapse;
+      display:none; /* toggled by JS */
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+    .items-table th, .items-table td {
+      padding:10px 12px;
+      border-bottom:1px solid #e9e9e9;
+      text-align:left;
+      font-size:14px;
+    }
+    .items-table thead th {
+      background:#fafafa;
+      position:sticky;
+      top:0;
+      z-index:1;
+    }
+    .manufacturer-row {
+      background:#f6f9ff;
+      font-weight:700;
+    }
+
+    /* small responsive adjustments */
+    @media (max-width:900px){
+      .page{ margin:18px; padding:16px;}
+      .main-heading{ font-size:44px; }
+      .contact-left{ font-size:26px; float:none; }
+      .sub-heading{ font-size:28px; }
+    }
   </style>
 </head>
 <body>
+  <div class="page">
+    <!-- Line 1 -->
+    <h1 class="main-heading">FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
 
-  <!-- Heading -->
-  <h1>FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
+    <!-- Line 2 (left side) -->
+    <div class="clearfix">
+      <div class="contact-left">SAEED AHMAD 0300-4461365</div>
+    </div>
 
-  <!-- Contact Info -->
-  <div class="contact">SAEED AHMAD 0300-4461365</div>
+    <!-- Line 3 -->
+    <div class="administrator">Administrator : Dr. Sheeba Saeed</div>
 
-  <!-- Admin Info -->
-  <div class="admin">Administrator : Dr. Sheeba Saeed</div>
+    <!-- Line 4 -->
+    <div class="consultant">Consultant : Dr. Human Sajawal , Dr. Abeera Azmat</div>
 
-  <!-- Consultants -->
-  <div class="consultants">Consultant : Dr. Human Sajawal, Dr. Abeera Azmat</div>
+    <!-- Line 5 -->
+    <div class="sub-heading">WE PROVIDE CARE FOR YOUR NEW BORN</div>
 
-  <!-- Slogan -->
-  <div class="slogan">WE PROVIDE CARE FOR YOUR NEW BORN</div>
+    <!-- Line 6 -->
+    <div class="address">Address : - College Road Narowal</div>
 
-  <!-- Address -->
-  <div class="address">Address: College Road Narowal</div>
+    <!-- Line 7 - Dropdown list of items -->
+    <label for="itemSelect" style="font-weight:700; display:block; margin-bottom:8px;">LIST OF ITEMS</label>
 
-  <!-- Dropdown -->
-  <label for="product-list">LIST OF ITEMS</label>
-  <select id="product-list">
-    <option class="product-group" disabled>-- ABBOT --</option>
-    <option value="41">DYOTRA D TAB - Pur: 34 | Sale: 46</option>
+    <div class="dropdown-wrap">
+      <!-- A tall multi-line select so user can browse many items.
+           If you prefer a single-line dropdown, remove the `size="10"` attribute.
+      -->
+      <select id="itemSelect" class="item-select" size="10" aria-label="List of items">
+        <optgroup label="ABBOT">
+          <option value="10|DUPHASTON|54|63">10 — DUPHASTON — Pur: 54 — Sale: 63</option>
+          <option value="182|IBRET FOLIC 500 GRADUMET|10|11">182 — IBRET FOLIC 500 GRADUMET — Pur: 10 — Sale: 11</option>
+          <option value="196|T-T- INJ|25|180">196 — T-T- INJ — Pur: 25 — Sale: 180</option>
+          <option value="199|SURGICAL TAPE KIT|27|50">199 — SURGICAL TAPE KIT — Pur: 27 — Sale: 50</option>
+          <option value="200|MLITE-1|771|1000">200 — MLITE-1 — Pur: 771 — Sale: 1000</option>
+          <option value="211|D-GEST|41|50">211 — D-GEST — Pur: 41 — Sale: 50</option>
+          <option value="213|ENZ-10|63|88">213 — ENZ-10 — Pur: 63 — Sale: 88</option>
+          <option value="218|ENZ-10 50 MG|33|48">218 — ENZ-10 50 MG — Pur: 33 — Sale: 48</option>
+        </optgroup>
 
-    <option class="product-group" disabled>-- BROOKS --</option>
-    <option value="30">PYODINE 30ML BROOKS - Pur: 107 | Sale: 150</option>
+        <optgroup label="AMROS">
+          <option value="14|SYNTO INJ|7|12">14 — SYNTO INJ — Pur: 7 — Sale: 12</option>
+        </optgroup>
 
-    <option class="product-group" disabled>-- GT PHARMA CARE --</option>
-    <option value="51">CAGEN-D - Pur: 15 | Sale: 21</option>
+        <optgroup label="ANSELL">
+          <option value="15|SURGICAL GLOVES NO 7|195|250">15 — SURGICAL GLOVES NO 7 — Pur: 195 — Sale: 250</option>
+          <option value="169|SURGICAL GLOVES NO 7.5|195|251">169 — SURGICAL GLOVES NO 7.5 — Pur: 195 — Sale: 251</option>
+        </optgroup>
 
-    <option class="product-group" disabled>-- HILTON --</option>
-    <option value="60">TRANSMIN INJ 500MG - Pur: 78 | Sale: 152</option>
+        <optgroup label="APSIS">
+          <option value="12|ETT TUBE|130|140">12 — ETT TUBE — Pur: 130 — Sale: 140</option>
+          <option value="13|MOVEGUT SACHET|28|44">13 — MOVEGUT SACHET — Pur: 28 — Sale: 44</option>
+          <option value="16|DEXTOL WATER 5%1000ML|75|140">16 — DEXTOL WATER 5%1000ML — Pur: 75 — Sale: 140</option>
+          <option value="17|NS 1000 ML|68|130">17 — NS 1000 ML — Pur: 68 — Sale: 130</option>
+          <option value="18|RL 1000 ML|70|150">18 — RL 1000 ML — Pur: 70 — Sale: 150</option>
+          <option value="19|RL 500 ML|60|120">19 — RL 500 ML — Pur: 60 — Sale: 120</option>
+        </optgroup>
 
-    <option class="product-group" disabled>-- RG PHARMA --</option>
-    <option value="88">IRONONE CAP - Pur: 17 | Sale: 20</option>
+        <optgroup label="ASIAN CONTINENTAL">
+          <option value="20|KOLAC SYP|230|282">20 — KOLAC SYP — Pur: 230 — Sale: 282</option>
+          <option value="21|VORAN CAP 50MG|11|14">21 — VORAN CAP 50MG — Pur: 11 — Sale: 14</option>
+          <option value="180|RIDOSPA 80MG TAB|11|13">180 — RIDOSPA 80MG TAB — Pur: 11 — Sale: 13</option>
+          <option value="203|GRASIRON TAB|43|50">203 — GRASIRON TAB — Pur: 43 — Sale: 50</option>
+          <option value="204|GRASIRON INJ|149|180">204 — GRASIRON INJ — Pur: 149 — Sale: 180</option>
+          <option value="205|RIDOSPA INJ|64|200">205 — RIDOSPA INJ — Pur: 64 — Sale: 200</option>
+          <option value="206|MIKCAL SACHET|71|100">206 — MIKCAL SACHET — Pur: 71 — Sale: 100</option>
+          <option value="208|DIGESTINE CAP|19|22">208 — DIGESTINE CAP — Pur: 19 — Sale: 22</option>
+          <option value="210|FERRICURE CAP 150MG|17|20">210 — FERRICURE CAP 150MG — Pur: 17 — Sale: 20</option>
+        </optgroup>
 
-    <option class="product-group" disabled>-- SURGICAL ITEMS --</option>
-    <option value="112">DRAIN TUBE - Pur: 35 | Sale: 100</option>
-    <option value="115">DELIVERY SHEET - Pur: 45 | Sale: 100</option>
-    <option value="117">SURGICAL BLADE CHINA - Pur: 10 | Sale: 30</option>
-    <option value="119">SURGICAL GLOVES NO 6.5 - Pur: 200 | Sale: 250</option>
-    <option value="124">SYRINGES 1 CC - Pur: 8 | Sale: 30</option>
+        <optgroup label="BAJWA PHARMA">
+          <option value="22|SEDAPHIRINE INJ|200|250">22 — SEDAPHIRINE INJ — Pur: 200 — Sale: 250</option>
+          <option value="23|COVERM INJ|8|30">23 — COVERM INJ — Pur: 8 — Sale: 30</option>
+          <option value="109|ONSET INJ 8GM|205|219">109 — ONSET INJ 8GM — Pur: 205 — Sale: 219</option>
+          <option value="143|CATGET NO 1|117|300">143 — CATGET NO 1 — Pur: 117 — Sale: 300</option>
+          <option value="168|CATGET NO 2|117|250">168 — CATGET NO 2 — Pur: 117 — Sale: 250</option>
+        </optgroup>
+      </select>
 
-    <option class="product-group" disabled>-- WEATHER FOLDS --</option>
-    <option value="146">SOFVASC TAB 5MG - Pur: 10 | Sale: 12</option>
+      <div class="controls">
+        <button id="showTable" class="show-table-btn" type="button">Show full list</button>
+        <div style="margin-top:10px; font-size:13px; color:#555;">
+          Select an item to see its details below.
+        </div>
+      </div>
+    </div>
 
-    <option class="product-group" disabled>-- MORE ITEMS (Sample Entries) --</option>
-    <option value="182">IBRET FOLIC 500 GRADUMET - Pur: 10 | Sale: 11</option>
-    <option value="190">PYODINE 60ML - Pur: 214 | Sale: 250</option>
-    <option value="61">TRANSMIN CAP 500MG - Pur: 34 | Sale: 40</option>
-    <option value="198">TRONS INJ 500 ML - Pur: 76 | Sale: 175</option>
-    <option value="147">AWARDIN PLUS CAP - Pur: 26 | Sale: 30</option>
+    <!-- Details display area -->
+    <div id="selectedDetails" style="margin-top:14px; font-size:15px; color:#111; min-height:28px;"></div>
 
-    <!-- You can continue adding more options here following the same pattern -->
-  </select>
+    <!-- Full table (hidden initially) -->
+    <table id="fullItemsTable" class="items-table" aria-hidden="true">
+      <thead>
+        <tr>
+          <th style="width:90px">Code</th>
+          <th>Item Name</th>
+          <th style="width:110px">Pur. Rate</th>
+          <th style="width:110px">Sale Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ABBOT -->
+        <tr class="manufacturer-row"><td colspan="4">ABBOT</td></tr>
+        <tr><td>10</td><td>DUPHASTON</td><td>54</td><td>63</td></tr>
+        <tr><td>182</td><td>IBRET FOLIC 500 GRADUMET</td><td>10</td><td>11</td></tr>
+        <tr><td>196</td><td>T-T- INJ</td><td>25</td><td>180</td></tr>
+        <tr><td>199</td><td>SURGICAL TAPE KIT</td><td>27</td><td>50</td></tr>
+        <tr><td>200</td><td>MLITE-1</td><td>771</td><td>1000</td></tr>
+        <tr><td>211</td><td>D-GEST</td><td>41</td><td>50</td></tr>
+        <tr><td>213</td><td>ENZ-10</td><td>63</td><td>88</td></tr>
+        <tr><td>218</td><td>ENZ-10 50 MG</td><td>33</td><td>48</td></tr>
 
+        <!-- AMROS -->
+        <tr class="manufacturer-row"><td colspan="4">AMROS</td></tr>
+        <tr><td>14</td><td>SYNTO INJ</td><td>7</td><td>12</td></tr>
+
+        <!-- ANSELL -->
+        <tr class="manufacturer-row"><td colspan="4">ANSELL</td></tr>
+        <tr><td>15</td><td>SURGICAL GLOVES NO 7</td><td>195</td><td>250</td></tr>
+        <tr><td>169</td><td>SURGICAL GLOVES NO 7.5</td><td>195</td><td>251</td></tr>
+
+        <!-- APSIS -->
+        <tr class="manufacturer-row"><td colspan="4">APSIS</td></tr>
+        <tr><td>12</td><td>ETT TUBE</td><td>130</td><td>140</td></tr>
+        <tr><td>13</td><td>MOVEGUT SACHET</td><td>28</td><td>44</td></tr>
+        <tr><td>16</td><td>DEXTOL WATER 5%1000ML</td><td>75</td><td>140</td></tr>
+        <tr><td>17</td><td>NS 1000 ML</td><td>68</td><td>130</td></tr>
+        <tr><td>18</td><td>RL 1000 ML</td><td>70</td><td>150</td></tr>
+        <tr><td>19</td><td>RL 500 ML</td><td>60</td><td>120</td></tr>
+
+        <!-- ASIAN CONTINENTAL -->
+        <tr class="manufacturer-row"><td colspan="4">ASIAN CONTINENTAL</td></tr>
+        <tr><td>20</td><td>KOLAC SYP</td><td>230</td><td>282</td></tr>
+        <tr><td>21</td><td>VORAN CAP 50MG</td><td>11</td><td>14</td></tr>
+        <tr><td>180</td><td>RIDOSPA 80MG TAB</td><td>11</td><td>13</td></tr>
+        <tr><td>203</td><td>GRASIRON TAB</td><td>43</td><td>50</td></tr>
+        <tr><td>204</td><td>GRASIRON INJ</td><td>149</td><td>180</td></tr>
+        <tr><td>205</td><td>RIDOSPA INJ</td><td>64</td><td>200</td></tr>
+        <tr><td>206</td><td>MIKCAL SACHET</td><td>71</td><td>100</td></tr>
+        <tr><td>208</td><td>DIGESTINE CAP</td><td>19</td><td>22</td></tr>
+        <tr><td>210</td><td>FERRICURE CAP 150MG</td><td>17</td><td>20</td></tr>
+
+        <!-- BAJWA PHARMA -->
+        <tr class="manufacturer-row"><td colspan="4">BAJWA PHARMA</td></tr>
+        <tr><td>22</td><td>SEDAPHIRINE INJ</td><td>200</td><td>250</td></tr>
+        <tr><td>23</td><td>COVERM INJ</td><td>8</td><td>30</td></tr>
+        <tr><td>109</td><td>ONSET INJ 8GM</td><td>205</td><td>219</td></tr>
+        <tr><td>143</td><td>CATGET NO 1</td><td>117</td><td>300</td></tr>
+        <tr><td>168</td><td>CATGET NO 2</td><td>117</td><td>250</td></tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <script>
+    // Simple interactivity:
+    const select = document.getElementById('itemSelect');
+    const details = document.getElementById('selectedDetails');
+    const showTableBtn = document.getElementById('showTable');
+    const fullTable = document.getElementById('fullItemsTable');
+
+    // When the user picks an item, show its parsed details
+    function showSelectedInfo(){
+      const opt = select.options[select.selectedIndex];
+      if(!opt) { details.textContent = ''; return; }
+      // value formatted as: code|name|pur|sale
+      const val = opt.value || '';
+      const parts = val.split('|');
+      if(parts.length >= 4){
+        details.innerHTML = '<strong>Selected:</strong> ' +
+          escapeHtml(parts[1]) +
+          ' &nbsp; | &nbsp; <strong>Code:</strong> ' + escapeHtml(parts[0]) +
+          ' &nbsp; | &nbsp; <strong>Pur. Rate:</strong> ' + escapeHtml(parts[2]) +
+          ' &nbsp; | &nbsp; <strong>Sale Rate:</strong> ' + escapeHtml(parts[3]);
+      } else {
+        details.textContent = opt.textContent || opt.innerText;
+      }
+    }
+
+    select.addEventListener('change', showSelectedInfo);
+    // initialize display for first visible option
+    showSelectedInfo();
+
+    // Toggle full table
+    showTableBtn.addEventListener('click', function(){
+      const isHidden = fullTable.style.display === '' || fullTable.style.display === 'none';
+      fullTable.style.display = isHidden ? 'table' : 'none';
+      fullTable.setAttribute('aria-hidden', String(!isHidden));
+      showTableBtn.textContent = isHidden ? 'Hide full list' : 'Show full list';
+      // if we just showed the table, scroll to it
+      if(isHidden){
+        fullTable.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    });
+
+    // small helper to escape HTML
+    function escapeHtml(str){
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+  </script>
 </body>
 </html>
