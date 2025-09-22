@@ -1,138 +1,130 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fazal Din Memorial Gynae Hospital</title>
   <style>
-    :root{
-      --bg: #f3fff3; /* very light green background */
-      --red: #cc0000;
-      --blue: #0b56d6;
-      --pink: #ff66b2;
-      --sky: #57c7ff;
-      --light-gray: #f7f7f7;
-      --text: #111;
-      --container-max: 900px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }html,body{height:100%;margin:0;background:var(--bg);color:var(--text)}
+    body {
+      background-color: #eaffea; /* Very light green */
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
-.page{
-  max-width:var(--container-max);
-  margin:28px auto;
-  background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.95));
-  border-radius:12px;
-  box-shadow:0 6px 22px rgba(0,0,0,0.08);
-  padding:28px;
-}
+    h1 {
+      color: red;
+      font-size: 60px;
+      text-align: center;
+      margin-bottom: 0;
+    }
 
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-  flex-wrap:wrap;
-}
+    .contact {
+      color: blue;
+      font-size: 35px;
+      text-align: left;
+    }
 
-/* Main heading */
-h1.main-heading{
-  color:var(--red);
-  font-size:60px; /* requested */
-  line-height:0.95;
-  margin:0;
-  font-weight:700;
-  letter-spacing:0.6px;
-}
+    .admin {
+      color: pink;
+      font-size: 30px;
+    }
 
-/* Left column item (Saeed Ahmad and phone) */
-.left-sidebar{
-  flex:0 0 260px;
-  text-align:left;
-}
-.left-sidebar .name{
-  color:var(--blue);
-  font-size:35px; /* requested */
-  margin:0 0 6px 0;
-  font-weight:600;
-}
-.left-sidebar .phone{
-  color:var(--blue);
-  font-size:18px;
-  margin:0;
-  opacity:0.9;
-}
+    .consultants {
+      color: skyblue;
+      font-size: 25px;
+    }
 
-/* Details block (center/right) */
-.details{
-  flex:1 1 540px;
-  padding-left:12px;
-}
+    .slogan {
+      font-size: 35px;
+      text-align: center;
+      font-weight: bold;
+    }
 
-.admin{
-  color:var(--pink);
-  font-size:30px; /* requested */
-  margin:6px 0;
-  font-weight:600;
-}
+    .address {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
 
-.consultants{
-  color:var(--sky);
-  font-size:25px; /* requested */
-  margin:6px 0 12px 0;
-  font-weight:600;
-}
+    label {
+      font-size: 25px;
+      font-weight: bold;
+    }
 
-.slogan{
-  font-size:35px; /* WE PROVIDE CARE... */
-  margin:18px 0;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:0.6px;
-}
+    select {
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
 
-.address{
-  font-size:20px; /* requested */
-  margin-top:8px;
-  color:#214a21;
-  font-weight:500;
-}
+    option {
+      padding: 5px;
+    }
 
-/* small responsive tweaks */
-@media (max-width:720px){
-  .left-sidebar{flex-basis:100%;}
-  .details{flex-basis:100%;padding-left:0}
-  h1.main-heading{font-size:36px}
-  .left-sidebar .name{font-size:26px}
-  .admin{font-size:22px}
-  .consultants{font-size:18px}
-  .slogan{font-size:22px}
-}
-
-/* small footer note */
-footer{margin-top:18px;font-size:13px;color:#444;opacity:0.8}
+    .product-group {
+      font-weight: bold;
+      color: darkgreen;
+    }
 
   </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="left-sidebar" aria-label="Contact">
-        <p class="name">SAEED AHMAD</p>
-        <p class="phone">0300-4461365</p>
-      </div><div class="details">
-    <h1 class="main-heading">FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
-    <p class="admin">Administrator : Dr. Sheeba Saeed</p>
-    <p class="consultants">Consultant : Dr. Human Sajawal , Dr. Abeera Azmat</p>
-    <p class="slogan">WE PROVIDE CARE FOR YOUR NEW BORN</p>
-    <p class="address">Address : - College Road Narowal</p>
-  </div>
-</header>
 
-<footer>
-  <small>Prepared for GitHub. Save this file as <code>index.html</code> and push to your repository to host with GitHub Pages.</small>
-</footer>
+  <!-- Heading -->
+  <h1>FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
 
-  </div>
+  <!-- Contact Info -->
+  <div class="contact">SAEED AHMAD 0300-4461365</div>
+
+  <!-- Admin Info -->
+  <div class="admin">Administrator : Dr. Sheeba Saeed</div>
+
+  <!-- Consultants -->
+  <div class="consultants">Consultant : Dr. Human Sajawal, Dr. Abeera Azmat</div>
+
+  <!-- Slogan -->
+  <div class="slogan">WE PROVIDE CARE FOR YOUR NEW BORN</div>
+
+  <!-- Address -->
+  <div class="address">Address: College Road Narowal</div>
+
+  <!-- Dropdown -->
+  <label for="product-list">LIST OF ITEMS</label>
+  <select id="product-list">
+    <option class="product-group" disabled>-- ABBOT --</option>
+    <option value="41">DYOTRA D TAB - Pur: 34 | Sale: 46</option>
+
+    <option class="product-group" disabled>-- BROOKS --</option>
+    <option value="30">PYODINE 30ML BROOKS - Pur: 107 | Sale: 150</option>
+
+    <option class="product-group" disabled>-- GT PHARMA CARE --</option>
+    <option value="51">CAGEN-D - Pur: 15 | Sale: 21</option>
+
+    <option class="product-group" disabled>-- HILTON --</option>
+    <option value="60">TRANSMIN INJ 500MG - Pur: 78 | Sale: 152</option>
+
+    <option class="product-group" disabled>-- RG PHARMA --</option>
+    <option value="88">IRONONE CAP - Pur: 17 | Sale: 20</option>
+
+    <option class="product-group" disabled>-- SURGICAL ITEMS --</option>
+    <option value="112">DRAIN TUBE - Pur: 35 | Sale: 100</option>
+    <option value="115">DELIVERY SHEET - Pur: 45 | Sale: 100</option>
+    <option value="117">SURGICAL BLADE CHINA - Pur: 10 | Sale: 30</option>
+    <option value="119">SURGICAL GLOVES NO 6.5 - Pur: 200 | Sale: 250</option>
+    <option value="124">SYRINGES 1 CC - Pur: 8 | Sale: 30</option>
+
+    <option class="product-group" disabled>-- WEATHER FOLDS --</option>
+    <option value="146">SOFVASC TAB 5MG - Pur: 10 | Sale: 12</option>
+
+    <option class="product-group" disabled>-- MORE ITEMS (Sample Entries) --</option>
+    <option value="182">IBRET FOLIC 500 GRADUMET - Pur: 10 | Sale: 11</option>
+    <option value="190">PYODINE 60ML - Pur: 214 | Sale: 250</option>
+    <option value="61">TRANSMIN CAP 500MG - Pur: 34 | Sale: 40</option>
+    <option value="198">TRONS INJ 500 ML - Pur: 76 | Sale: 175</option>
+    <option value="147">AWARDIN PLUS CAP - Pur: 26 | Sale: 30</option>
+
+    <!-- You can continue adding more options here following the same pattern -->
+  </select>
+
 </body>
 </html>
