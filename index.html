@@ -264,79 +264,472 @@
 </h2>
 
   
-<!-- BLOOD TESTS -->
-<h3 style="color:#1f4e79; font-size:28px; margin-top:25px;">🧪 Blood Tests</h3>
-<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:15px; margin-top:15px;">
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>CBC</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>ESR</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HB%</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HBA1C</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>BSR</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Lipid Profile</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Cholesterol</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Uric Acid</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>LFT</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>RFTs</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>PT</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>APTT</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>INR</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Blood Group</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Cross Match</div>
+<h3 style="color:#2980b9; font-size:28px; margin-top:30px; margin-bottom:15px;">Blood Tests</h3>
+
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:15px;">
+
+  <!-- HBA1C -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#eaf2f8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      HBA1C
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- STOOL R E -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fdebd0; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      STOOL R E
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- RFTs -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#e8f8f5; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      RFTs
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- IGE -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#f9ebea; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      IGE
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- CALCIUM -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fef9e7; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      CALCIUM
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- HB% -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#f5eef8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      HB%
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- HCV ELIZA -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#e8daef; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      HCV ELIZA
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- SEMEN ANALYSIS -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#d5f5e3; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      SEMEN ANALYSIS
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- BLOOD GROUP -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fadbd8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      BLOOD GROUP
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- HBS ALIZA -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#ebf5fb; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      HBS ALIZA
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- WIDAL -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fdebd0; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      WIDAL
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- URINE C E -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fef5e7; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      URINE C E
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- HCV PCR(QL) -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#f4ecf7; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      HCV PCR(QL)
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- H. PYLORI -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#eafaf1; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      H. PYLORI
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- URINE PREGNANCY -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fdf2e9; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      URINE PREGNANCY
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
 </div>
 
-<!-- HORMONE TESTS -->
-<h3 style="color:#6a1b9a; font-size:28px; margin-top:25px;">🔬 Hormone Tests</h3>
-<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:15px; margin-top:15px;">
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>T3 T4 TSH</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>TSH</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>FSH</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>LH</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Prolactin</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Testosterone</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Progesterone</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>B HCG</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Beta HCG</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Insulin</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Vitamin D3</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Vitamin B12</div>
+<script>
+function toggleBubble(el) {
+  const bubble = el.nextElementSibling;
+  bubble.style.display = (bubble.style.display === "none" || bubble.style.display === "") ? "block" : "none";
+}
+      </script>
+
+
+
+
+<h3 style="color:#27ae60; font-size:28px; margin-top:30px; margin-bottom:15px;">Hormone Tests</h3>
+
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:15px;">
+
+  <!-- FSH -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#eaf2f8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      FSH
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- LH -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fdebd0; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      LH
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- PROLACTIN -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#e8f8f5; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      PROLACTIN
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- TESTOSTERONE -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#f9ebea; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      TESTOSTERONE
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- ESTRADIOL -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fef9e7; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      ESTRADIOL
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- PROGESTERONE -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#f5eef8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      PROGESTERONE
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- T3 -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#e8daef; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      T3
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- T4 -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#d5f5e3; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      T4
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- TSH -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fadbd8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      TSH
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- FREE T3 -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#ebf5fb; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      FREE T3
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- FREE T4 -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fdebd0; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      FREE T4
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- CORTISOL -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fef5e7; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      CORTISOL
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
 </div>
 
-<!-- INFECTIOUS & VIRAL TESTS -->
-<h3 style="color:#c62828; font-size:28px; margin-top:25px;">🦠 Infectious & Viral Tests</h3>
-<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:15px; margin-top:15px;">
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HCV</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HCV ELIZA</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HCV PCR (QL)</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HBV</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HBS ALIZA</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HBV PCR (QN)</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HB & AG</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>HIV</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>H. Pylori</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Typhidot</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Widal</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Malaria</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Dengue</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>VDRL</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>RA Factor</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>CRP</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>LDH</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Anti HCV</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>S Amylase</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>S Electrolytes</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<h3 style="color:#16a085; font-size:28px; margin-top:30px; margin-bottom:15px;">Imaging & Miscellaneous Tests</h3>
+
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:15px;">
+
+  <!-- DIGITAL X-RAY -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#eaf2f8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      DIGITAL X-RAY
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- URINE C E -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fdebd0; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      URINE C E
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- URINE PREGNANCY -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#e8f8f5; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      URINE PREGNANCY
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- SEMEN ANALYSIS -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fef9e7; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      SEMEN ANALYSIS
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- SPUTUM FOR AFB -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#f5eef8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      SPUTUM FOR AFB
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- ESR -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#fadbd8; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      ESR
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
+  <!-- BLOOD GROUP -->
+  <div style="position: relative; display: inline-block;">
+    <div onclick="toggleBubble(this)" style="background:#ebf5fb; padding:18px; border-radius:12px; font-size:30px; cursor:pointer; text-align:center;">
+      BLOOD GROUP
+    </div>
+    <div class="bubble" style="display:none; position:absolute; top:-60px; left:50%; transform:translateX(-50%);
+                background:#fff; border:1px solid #ccc; padding:10px 15px; border-radius:8px;
+                font-size:42px; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
+      Rs. 1,000
+    </div>
+  </div>
+
 </div>
 
-<!-- IMAGING & MISC -->
-<h3 style="color:#2e7d32; font-size:28px; margin-top:25px;">🖼 Imaging & Miscellaneous</h3>
-<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:15px; margin-top:15px;">
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Digital X-Ray</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Semen Analysis</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Stool R/E</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Urine C/E</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Urine Pregnancy</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Sputum for AFB</div>
-  <div class="test-box" onclick="showPrice(this, 'Rs. 1,000')"><div class="price"></div>Troponin T</div>
-</div>
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
 
 <style>
   .test-box {
@@ -376,31 +769,6 @@
   }
 </script>
 
-
-
-
-
-<div style="position: relative; display: inline-block;">
-  <div onclick="toggleBubble(this)" 
-       style="background:#e8f8f5; padding:18px; border-radius:12px; font-size:60px; cursor:pointer; text-align:center;">
-    OBS SCAN
-  </div>
-  <div class="bubble" 
-       style="display:none; position:absolute; top:-40px; left:50%; transform:translateX(-50%);
-              background:#fff; border:1px solid #ccc; padding:6px 10px; border-radius:8px;
-              font-size:50px; box-shadow:0 2px 6px rgba(0,0,0,0.2); white-space:nowrap;">
-    Rs. 1,000
-  </div>
-</div>
-
-<script>
-function toggleBubble(el) {
-  const bubble = el.nextElementSibling;
-  bubble.style.display = (bubble.style.display === "none" || bubble.style.display === "") ? "block" : "none";
-}
-</script>
-
-  
 
 
 
@@ -476,6 +844,7 @@ function toggleBubble(el) {
 
 </body>
 </html>
+
 
 
 
