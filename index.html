@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fazal Din Memorial Gynae Hospital</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <!-- If you don't have a kit, replace icon <i> uses with inline SVGs included below or use CDN: 
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+
+  <style>
+    /* ---------- Base / Reset ---------- */
+    :root{
+      --bg: #0f1724;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent1: linear-gradient(135deg,#ff6b6b,#ffb86b);
+      --accent2: linear-gradient(135deg,#7c5cff,#4be1c3);
+      --glass: rgba(255,255,255,0.06);
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#f6f7ff 0%, #fff 40%);
+      color:#0b1220;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:28px;
+    }
+
+    /* ---------- Page container ---------- */
+    .site {
+      max-width:1120px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:20px;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      background: linear-gradient(90deg,#ffffff, #f0f7ff);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 6px 22px rgba(16,24,40,0.08);
+      border: 1px solid rgba(12,18,28,0.04);
+    }
+    .brand {
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .logo {
+      width:72px;
+      height:72px;
+      border-radius:14px;
+      background:var(--accent2);
+      display:grid;
+      place-items:center;
+      color:white;
+      font-weight:800;
+      font-family:Montserrat, Inter, sans-serif;
+      font-size:20px;
+      box-shadow: 0 6px 18px rgba(75,225,195,0.16);
+    }
+    .brand h1{
+      margin:0;
+      font-family:Montserrat, Inter, sans-serif;
+      font-size:20px;
+      letter-spacing:0.4px;
+    }
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+    .contact {
+      text-align:right;
+    }
+    .contact a{
+      display:inline-block;
+      margin-left:8px;
+      text-decoration:none;
+      color:#0b1220;
+      font-weight:600;
+      background:linear-gradient(90deg,#fff,#fff);
+      padding:6px 12px;
+      border-radius:10px;
+      box-shadow: 0 3px 10px rgba(2,6,23,0.06);
+      border:1px solid rgba(11,17,32,0.04);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:18px;
+      align-items:stretch;
+    }
+    .hero-card{
+      padding:24px;
+      border-radius:16px;
+      background: linear-gradient(180deg,#fff,#f7fbff);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+      border:1px solid rgba(11,17,32,0.03);
+    }
+    .hero-title{
+      font-family:Montserrat, sans-serif;
+      font-size:28px;
+      margin:0 0 6px 0;
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .hero-sub{
+      margin:0 0 18px 0;
+      color:var(--muted);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+    .mini{
+      background:var(--glass);
+      border-radius:12px;
+      padding:14px;
+      text-align:center;
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .side-image {
+      border-radius:16px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow: 0 12px 30px rgba(14,20,40,0.06);
+      border:1px solid rgba(11,17,32,0.03);
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .side-image img{width:100%;height:260px;object-fit:cover;display:block}
+    .side-image .meta{
+      padding:14px;
+    }
+
+    /* ---------- Services and Tests ---------- */
+    .blocks {
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:18px;
+    }
+
+    .card {
+      background:#fff;
+      border-radius:16px;
+      padding:18px;
+      box-shadow: 0 8px 18px rgba(12,18,30,0.04);
+      border: 1px solid rgba(12,18,30,0.03);
+    }
+    .card h2{
+      margin:0 0 12px 0;
+      font-family:Montserrat, sans-serif;
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .service-list{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+      gap:10px;
+    }
+    .service-item{
+      background: linear-gradient(180deg,#ffffff,#fbfdff);
+      border-radius:10px;
+      padding:10px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      border:1px solid rgba(12,18,30,0.03);
+    }
+    .service-item i{
+      font-size:20px;
+      width:36px;
+      height:36px;
+      display:grid;
+      place-items:center;
+      border-radius:8px;
+      color:white;
+      background:linear-gradient(135deg,#ff6b6b,#ffb86b);
+    }
+    .service-item strong{font-size:14px}
+
+    /* tests table */
+    .tests-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+    .test {
+      padding:12px;
+      border-radius:12px;
+      background: linear-gradient(180deg,#fff,#fbfbff);
+      border:1px dashed rgba(12,18,30,0.03);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+    }
+    .test .price{
+      font-weight:800;
+      color:#0b6b9b;
+    }
+
+    /* ---------- Doctors carousel (simple) ---------- */
+    .doctors {
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      padding-bottom:6px;
+    }
+    .doctor {
+      min-width:220px;
+      border-radius:12px;
+      background: linear-gradient(180deg,#fff,#fff);
+      padding:12px;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      border:1px solid rgba(12,18,30,0.03);
+      box-shadow: 0 8px 20px rgba(2,6,23,0.03);
+    }
+    .doctor img{
+      width:60px;height:60px;border-radius:12px;object-fit:cover;
+      flex-shrink:0;
+    }
+    .doctor .meta small{display:block;color:var(--muted)}
+
+    /* ---------- Footer / Contact ---------- */
+    footer{
+      border-radius:16px;
+      padding:18px;
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      align-items:center;
+      background:linear-gradient(90deg,#fffbf5,#f7fbff);
+      border:1px solid rgba(12,18,30,0.03);
+    }
+    .social a{
+      margin-left:8px;
+      text-decoration:none;
+      color:var(--muted);
+      font-size:18px;
+    }
+
+    /* small screens */
+    @media (max-width:980px){
+      .hero, .blocks { grid-template-columns: 1fr; }
+      .side-image img{height:200px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="site">
+
+    <!-- ====== HEADER / BRAND ======
+         Edit: .logo text, phone in .contact
+    -->
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">FD</div>
+        <div>
+          <h1>Fazal Din Memorial <span style="color:#4b9fff">Gynae</span> Hospital</h1>
+          <p>College Road, Narowal · Caring for mothers & newborns</p>
+          <p style="font-size:12px;color:var(--muted);margin-top:6px;">
+            Administrator: <strong>Dr. Sheeba Saeed</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="contact" aria-hidden="false">
+        <div style="font-size:13px;color:var(--muted);">Call / WhatsApp</div>
+        <a href="tel:+923004461365">📞 0300-4461365</a>
+        <a href="#" style="background:var(--accent1);color:white;margin-left:10px;">Make Appointment</a>
+      </div>
+    </header>
+
+    <!-- ====== HERO: Intro + Quick stats + Image ======
+         Replace the hero image URL(s) with your preferred images.
+         Unsplash dynamic placeholders used — you can swap to local files.
+    -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-title">
+          <span style="font-size:20px;color:#ff6b6b">♥</span>
+          <div>
+            FAZAL DIN MEMORIAL <br>
+            <span style="font-size:18px;color:#334155">Gynaecology & Maternity Centre</span>
+          </div>
+        </div>
+
+        <p class="hero-sub">We provide compassionate care for women and newborns — scans, deliveries, emergency care, and lab tests under one roof.</p>
+
+        <!-- quick features -->
+        <div class="hero-grid">
+          <div class="mini">👶 Newborn Care</div>
+          <div class="mini">🩺 Obstetric Scan (USG)</div>
+          <div class="mini">💉 Iron Drip / IV</div>
+          <div class="mini">🚑 Emergency Checkup</div>
+          <div class="mini">🧪 Lab Tests</div>
+          <div class="mini">🏥 Blood Transfusion</div>
+        </div>
+
+        <!-- small highlight cards -->
+        <div style="display:flex;gap:12px;margin-top:14px;">
+          <div style="flex:1;padding:12px;border-radius:12px;background:linear-gradient(180deg,#fff,#f9fbff);border:1px solid rgba(12,18,30,0.03)">
+            <small style="color:var(--muted)">Consultants</small>
+            <div style="font-weight:700;margin-top:6px">Dr. Hamna Sajawal<br>Dr. Abeera Azmat</div>
+          </div>
+          <div style="width:160px;padding:12px;border-radius:12px;background:linear-gradient(135deg,#4be1c3,#7c5cff);color:white;text-align:center;font-weight:700">
+            Open: Mon–Sun · 9am–9pm
+          </div>
+        </div>
+      </div>
+
+      <!-- side image + small gallery -->
+      <aside class="side-image card" aria-hidden="false">
+<img src="https://picsum.photos/800/600?random=1" alt="Hospital">
+<img src="https://picsum.photos/200/200?random=4" alt="Dr Hamna Sajawal">
+        <div class="meta">
+          <h3 style="margin:0 0 6px 0">Warm, modern maternity ward</h3>
+          <p style="margin:0;color:var(--muted)">Comfortable delivery suites, experienced nurses, and supportive neonatal care.</p>
+          <div style="display:flex;gap:8px;margin-top:12px">
+    <img src="https://picsum.photos/600/400?random=10" alt="Map">
+<img src="https://picsum.photos/200/120?random=2" alt="Equipment">
+<img src="https://picsum.photos/200/120?random=3" alt="Baby">
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ====== MAIN BLOCKS: Services & Tests ====== -->
+    <section class="blocks">
+
+      <!-- Services card: edit or add service items here -->
+      <div class="card">
+        <h2>🔹 Services We Provide</h2>
+        <div class="service-list">
+          <div class="service-item"><i style="background:linear-gradient(135deg,#ff6b6b,#ffb86b)"><i class="fas fa-heartbeat" aria-hidden="true"></i></i><strong>Pelvic Scan</strong></div>
+          <div class="service-item"><i style="background:linear-gradient(135deg,#7c5cff,#4be1c3)"><i class="fas fa-user-md" aria-hidden="true"></i></i><strong>Outpatient (OPD)</strong></div>
+          <div class="service-item"><i style="background:linear-gradient(135deg,#ffa8d4,#ff6b6b)"><i class="fas fa-child" aria-hidden="true"></i></i><strong>Obstetric Scan (OBS)</strong></div>
+          <div class="service-item"><i style="background:linear-gradient(135deg,#42a5f5,#7c5cff)"><i class="fas fa-syringe" aria-hidden="true"></i></i><strong>Iron Drip / IV</strong></div>
+          <div class="service-item"><i style="background:linear-gradient(135deg,#34d399,#4be1c3)"><i class="fas fa-vial" aria-hidden="true"></i></i><strong>Urine Pregnancy Test (UPT)</strong></div>
+          <div class="service-item"><i style="background:linear-gradient(135deg,#ffb86b,#ffd36b)"><i class="fas fa-prescription-bottle" aria-hidden="true"></i></i><strong>Blood Sugar (BSR)</strong></div>
+          <div class="service-item"><i style="background:linear-gradient(135deg,#7c5cff,#4be1c3)"><i class="fas fa-procedures" aria-hidden="true"></i></i><strong>Normal Delivery</strong></div>
+          <div class="service-item"><i style="background:linear-gradient(135deg,#ff6b6b,#ffb86b)"><i class="fas fa-x-ray" aria-hidden="true"></i></i><strong>Ultrasonography (USG)</strong></div>
+          <div class="service-item"><i style="background:linear-gradient(135deg,#34d399,#7c5cff)"><i class="fas fa-ambulance" aria-hidden="true"></i></i><strong>Emergency Check Up</strong></div>
+        </div>
+      </div>
+
+      <!-- Tests & Prices: this is split into small blocks for easy editing -->
+      <aside class="card">
+        <h2>🧪 Tests & Prices</h2>
+
+        <!-- Blood Tests -->
+        <div style="margin-bottom:10px;">
+          <h3 style="margin:0 0 8px 0;font-size:15px">Blood Tests</h3>
+          <div class="tests-grid">
+            <div class="test"><div>HBA1C</div><div class="price">Rs. 1,000</div></div>
+            <div class="test"><div>RFTs</div><div class="price">Rs. 1,000</div></div>
+            <div class="test"><div>HB%</div><div class="price">Rs. 1,000</div></div>
+            <div class="test"><div>Blood Group</div><div class="price">Rs. 1,000</div></div>
+            <div class="test"><div>HCV ELISA</div><div class="price">Rs. 1,000</div></div>
+            <div class="test"><div>WIDAL</div><div class="price">Rs. 1,000</div></div>
+          </div>
+          <small style="display:block;margin-top:8px;color:var(--muted)">Tip: To change prices, edit the <code>.price</code> text.</small>
+        </div>
+
+        <!-- Hormone Tests -->
+        <div style="margin-top:14px;">
+          <h3 style="margin:0 0 8px 0;font-size:15px">Hormone Tests</h3>
+          <div class="tests-grid">
+            <div class="test"><div>FSH</div><div class="price">Rs. 1,000</div></div>
+            <div class="test"><div>LH</div><div class="price">Rs. 1,000</div></div>
+            <div class="test"><div>Prolactin</div><div class="price">Rs. 1,000</div></div>
+            <div class="test"><div>Testosterone</div><div class="price">Rs. 1,000</div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;text-align:center">
+          <a href="#" style="display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#7c5cff,#4be1c3);color:white;text-decoration:none;font-weight:700">Full Tests & Price List</a>
+        </div>
+      </aside>
+
+    </section>
+
+    <!-- ====== DOCTORS / TEAM ====== -->
+    <section class="card">
+      <h2>👩‍⚕️ Our Consultants</h2>
+      <div class="doctors" aria-label="doctors list">
+        <div class="doctor">
+<img src="https://picsum.photos/200/200?random=4" alt="Dr Hamna Sajawal">
+          <div class="meta">
+            <div style="font-weight:700">Dr. Hamna Sajawal</div>
+            <small>Consultant Gynecologist</small>
+          </div>
+        </div>
+        <div class="doctor">
+src="https://picsum.photos/200/200?random=5" alt="Dr Abeera Azmat">
+<img
+          <div class="meta">
+            <div style="font-weight:700">Dr. Abeera Azmat</div>
+            <small>Obstetrician</small>
+          </div>
+        </div>
+        <div class="doctor">
+    <img src="https://picsum.photos/200/200?random=6" alt="Nurse">
+          <div class="meta">
+            <div style="font-weight:700">Nursing Team</div>
+            <small>24/7 Neonatal Support</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== IMAGES: Medical equipment / facility (edit as needed) ====== -->
+    <section class="card" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;align-items:stretch">
+      <div style="border-radius:12px;overflow:hidden">
+ <img src="https://picsum.photos/800/600?random=7" alt="Ultrasound machine">
+        <div style="padding:10px">
+          <strong>Ultrasound & Imaging</strong>
+          <div style="color:var(--muted);font-size:13px">Modern imaging for accurate prenatal monitoring</div>
+        </div>
+      </div>
+
+      <div style="border-radius:12px;overflow:hidden">
+        <img src="https://picsum.photos/800/600?random=8" alt="Delivery room">
+        <div style="padding:10px">
+          <strong>Delivery Suites</strong>
+          <div style="color:var(--muted);font-size:13px">Comfort-first delivery rooms with neonatal resuscitation</div>
+        </div>
+      </div>
+
+      <div style="border-radius:12px;overflow:hidden">
+       <img src="https://picsum.photos/800/600?random=9" alt="Laboratory">
+        <div style="padding:10px">
+          <strong>In-house Laboratory</strong>
+          <div style="color:var(--muted);font-size:13px">Fast, reliable tests — blood, hormones & cultures</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== LOCATION & CONTACT MAP PLACEHOLDER ======
+         Replace the image below with an embedded Google Map iframe if you like.
+    -->
+    <section class="card" style="display:grid;grid-template-columns:1fr 300px;gap:12px;align-items:stretch">
+      <div>
+        <h2>📍 Our Location</h2>
+        <p style="color:var(--muted)">College Road, Narowal — drop by or call ahead for appointments and scans.</p>
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <a href="tel:+923004461365" style="padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,#ff6b6b,#ffb86b);color:white;text-decoration:none;font-weight:700">📞 0300-4461365</a>
+          <a href="#" style="padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,#7c5cff,#4be1c3);color:white;text-decoration:none;font-weight:700">Message / WhatsApp</a>
+        </div>
+
+        <div style="margin-top:16px;color:var(--muted)">
+          <strong>Visiting Hours:</strong><br>
+          Mon–Sun · 9:00 AM – 9:00 PM<br>
+          <strong>Administrator:</strong> Dr. Sheeba Saeed
+        </div>
+      </div>
+
+      <div style="border-radius:12px;overflow:hidden">
+        <!-- Map placeholder: replace src with Google Maps embed if desired -->
+        <img src="https://picsum.photos/600/400?random=10" alt="Map">
+      </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+      <div>
+        <div style="font-weight:800">Fazal Din Memorial Gynae Hospital</div>
+        <div style="font-size:13px;color:var(--muted)">College Road, Narowal · © <span id="year"></span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="social" aria-hidden="true">
+          <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div style="font-size:13px;color:var(--muted)">Made with ♥ for the community</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Small helpers: set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Accessibility: if Font Awesome not loaded (kit not provided), replace icons with basic emoji fallback
+    // (If you use Font Awesome CDN link, remove or adapt the kit URL above.)
+  </script>
+</body>
+                                                                                                    </html>
