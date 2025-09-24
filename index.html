@@ -1,6 +1,49 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+
+  <style>
+  .nurse-card {
+    background: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .nurse-card:hover {
+    background: #e6f7ff;
+    border-color: #0077b6;
+    color: #0077b6;
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .name {
+    font-size: 14px;
+  }
+</style>
+
   
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -484,7 +527,38 @@ src="https://picsum.photos/200/200?random=5" alt="Dr Abeera Azmat">
         <div class="doctor">
     <img src="https://picsum.photos/200/200?random=6" alt="Nurse">
           <div class="meta">
-            <div style="font-weight:700">Nursing Team</div>
+            <div style="font-weight:700; font-size:18px; margin-bottom:15px;">
+  Nursing Team
+</div>
+
+<div style="
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 15px; 
+  max-width: 600px;
+">
+  <div class="nurse-card">
+    <div class="avatar">MI</div>
+    <div class="name">Muzdalifa Imtiaz</div>
+  </div>
+  <div class="nurse-card">
+    <div class="avatar">N</div>
+    <div class="name">Nighat</div>
+  </div>
+  <div class="nurse-card">
+    <div class="avatar">S</div>
+    <div class="name">Shabana</div>
+  </div>
+  <div class="nurse-card">
+    <div class="avatar">A</div>
+    <div class="name">Amina</div>
+  </div>
+  <div class="nurse-card">
+    <div class="avatar">Z</div>
+    <div class="name">Zunaira</div>
+  </div>
+</div>
+
             <small>24/7 Neonatal Support</small>
           </div>
         </div>
@@ -571,5 +645,6 @@ src="https://picsum.photos/200/200?random=5" alt="Dr Abeera Azmat">
 </body>
 
                                                                                                     </html>
+
 
 
