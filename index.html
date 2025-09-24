@@ -42,6 +42,139 @@
   .name {
     font-size: 14px;
   }
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('images/hero-image.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.hero-overlay {
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.4);
+}
+.hero-content { text-align: center; z-index: 2; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero p { font-size: 1.5rem; margin-bottom: 1.5rem; }
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-primary {
+  background-color: #E91E63;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #C2185B;
+  transform: translateY(-2px);
+}
+
+/* Services Section */
+.services-section { padding: 4rem 0; background-color: #f9f9f9; }
+.services-section h2 { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+.card img { width: 60px; margin-bottom: 1rem; }
+.card h3 { margin-bottom: 0.75rem; }
+.card p { color: #666; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
 </style>
 
   
@@ -359,6 +492,86 @@
 </head>
 <body>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Fazal Din Memorial Gynae Hospital</h1>
+    <p>Caring for mothers & newborns since day one</p>
+    <a href="#contact" class="btn btn-primary">Make Appointment</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
   <div class="site">
 
     <!-- ====== HEADER / BRAND ======
@@ -450,69 +663,112 @@
       </aside>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <!-- ====== MAIN BLOCKS: Services & Tests ====== -->
-    <section class="blocks">
-
-      <!-- Services card: edit or add service items here -->
+    >
+<!-- Services Section -->
+<section id="services" class="services-section">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="cards">
       <div class="card">
-        <h2>🔹 Services We Provide</h2>
-        <div class="service-list">
-          <div class="service-item"><i style="background:linear-gradient(135deg,#ff6b6b,#ffb86b)"><i class="fas fa-heartbeat" aria-hidden="true"></i></i><strong>Pelvic Scan</strong></div>
-          <div class="service-item"><i style="background:linear-gradient(135deg,#7c5cff,#4be1c3)"><i class="fas fa-user-md" aria-hidden="true"></i></i><strong>Outpatient (OPD)</strong></div>
-          <div class="service-item"><i style="background:linear-gradient(135deg,#ffa8d4,#ff6b6b)"><i class="fas fa-child" aria-hidden="true"></i></i><strong>Obstetric Scan (OBS)</strong></div>
-          <div class="service-item"><i style="background:linear-gradient(135deg,#42a5f5,#7c5cff)"><i class="fas fa-syringe" aria-hidden="true"></i></i><strong>Iron Drip / IV</strong></div>
-          <div class="service-item"><i style="background:linear-gradient(135deg,#34d399,#4be1c3)"><i class="fas fa-vial" aria-hidden="true"></i></i><strong>Urine Pregnancy Test (UPT)</strong></div>
-          <div class="service-item"><i style="background:linear-gradient(135deg,#ffb86b,#ffd36b)"><i class="fas fa-prescription-bottle" aria-hidden="true"></i></i><strong>Blood Sugar (BSR)</strong></div>
-          <div class="service-item"><i style="background:linear-gradient(135deg,#7c5cff,#4be1c3)"><i class="fas fa-procedures" aria-hidden="true"></i></i><strong>Normal Delivery</strong></div>
-          <div class="service-item"><i style="background:linear-gradient(135deg,#ff6b6b,#ffb86b)"><i class="fas fa-x-ray" aria-hidden="true"></i></i><strong>Ultrasonography (USG)</strong></div>
-          <div class="service-item"><i style="background:linear-gradient(135deg,#34d399,#7c5cff)"><i class="fas fa-ambulance" aria-hidden="true"></i></i><strong>Emergency Check Up</strong></div>
-        </div>
+        <img src="icons/ultrasound.svg" alt="Ultrasound">
+        <h3>Ultrasonography (USG)</h3>
+        <p>Advanced imaging for prenatal monitoring.</p>
       </div>
+      <div class="card">
+        <img src="icons/iron-drip.svg" alt="Iron Drip">
+        <h3>Iron Drip / IV</h3>
+        <p>Safe and effective iron infusion treatments.</p>
+      </div>
+      <!-- Add more service cards here -->
+    </div>
+  </div>
+</section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero">
+
+      
       <!-- Tests & Prices: this is split into small blocks for easy editing -->
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <h3 style="color:#0077b6; font-size:24px; margin-bottom:15px; text-align:center;">🧪 Available Tests</h3>
@@ -582,7 +838,7 @@
     background: #caf0f8;
   }
 </style>
-
+    </section>
 
 
 
@@ -731,7 +987,7 @@
         
 
 
-        
+     <section class="hero">   
        
 
 <!-- Live Total -->
@@ -1058,6 +1314,7 @@
 </body>
 
                                                                                                     </html>
+
 
 
 
