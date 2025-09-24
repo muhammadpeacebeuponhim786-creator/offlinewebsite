@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Fazal Din Memorial Gynae Hospital</title>
@@ -271,6 +272,47 @@
       .side-image img{height:200px}
     }
   </style>
+
+
+  <style>
+    /* 🔥 CSS CODE goes here */
+    .top-right-img {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+      opacity: 0.9;
+      animation: neonGlow 6s linear infinite;
+      transition: all 0.3s ease;
+    }
+
+    .top-right-img:hover {
+      opacity: 1;
+      animation: spinPulse 2.5s linear infinite, neonGlow 4s linear infinite;
+    }
+
+    @keyframes spinPulse {
+      0%   { transform: scale(1.0) rotate(0deg); }
+      50%  { transform: scale(1.3) rotate(180deg); }
+      100% { transform: scale(1.0) rotate(360deg); }
+    }
+
+    @keyframes neonGlow {
+      0%   { box-shadow: 0 0 6px #ff0000, 0 0 12px #ff0000, 0 0 18px #ff6600; }
+      25%  { box-shadow: 0 0 6px #ff6600, 0 0 12px #ffff00, 0 0 18px #00ff00; }
+      50%  { box-shadow: 0 0 6px #00ff00, 0 0 12px #00ffff, 0 0 18px #0000ff; }
+      75%  { box-shadow: 0 0 6px #0000ff, 0 0 12px #6600ff, 0 0 18px #ff00ff; }
+      100% { box-shadow: 0 0 6px #ff00ff, 0 0 12px #ff0000, 0 0 18px #ff6600; }
+    }
+  </style>
+
+
+
+    
 </head>
 <body>
 
@@ -308,7 +350,9 @@
     -->
 
 
-<img src="IMG-20250904-WA0005.jpg" alt="Description" class="top-right-img">
+<a href="index.html"> <!-- change link here -->
+    <img src="IMG-20250904-WA0005.jpg" alt="Logo" class="top-right-img">
+  </a>
 
 
 
@@ -527,4 +571,5 @@ src="https://picsum.photos/200/200?random=5" alt="Dr Abeera Azmat">
 </body>
 
                                                                                                     </html>
+
 
