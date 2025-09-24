@@ -189,7 +189,6 @@
 
 
 
-
   
 
 
@@ -244,14 +243,38 @@
 
 
 
+
+
+
+
 #welcome {
   padding: 80px 20px;
   color: white;
   text-align: center;
   border-radius: 16px;
+  background: #555; /* fallback grey in case images don't load */
   background-size: cover;
   background-position: center;
-  transition: background-image 1s ease-in-out; /* smooth fade */
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+
+#welcome::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* semi-transparent black */
+  z-index: 0;
+}
+#welcome h2,
+#welcome p {
+  position: relative;
+  z-index: 1; /* text stays above overlay */
 }
 
 
@@ -268,6 +291,22 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
@@ -492,10 +531,10 @@
 
   // Add your hospital-related photos here
   const images = [
-    "hospital1.jpg",
-    "hospital2.jpg",
-    "hospital3.jpg",
-    "hospital4.jpg"
+    "https://maternity.jacksonhealth.org/signature-suite-experience/",
+    "https://lenoxhill.northwell.edu/obgyn/obstetrics",
+    "https://www.greenwichhospital.org/services/maternity",
+    "https://www.vivid.care/insights/advice-tips/specialist-seating-for-maternity-wards/"
   ];
 
   let index = 0;
@@ -559,4 +598,5 @@
 </body>
 
 </html>
+
 
