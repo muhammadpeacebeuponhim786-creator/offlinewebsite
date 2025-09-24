@@ -164,14 +164,45 @@
   </div>
 </header>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>WELCOME TO OUR HOSPITAL 🏥</h1>
-    <p>Providing compassionate gynecological & maternity care since day one.</p>
-    <a href="#appointment" class="btn-cta">Book Appointment</a>
-  </div>
-</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="welcome" class="welcome-section">
+  <h2>Welcome to Our Hospital</h2>
+  <p>We provide compassionate care for mothers & newborns 👶💖</p>
+  </section>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
 
 <!-- Services -->
 <section class="services">
@@ -207,6 +238,45 @@
 </section>
 
 <style>
+
+
+
+
+
+
+#welcome {
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out; /* smooth fade */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 .nurses-section {
   background: #fff5f8;
   border-radius: 16px;
@@ -388,6 +458,105 @@
   document.getElementById('liveTotal').onclick=()=>document.getElementById('resultModal').style.display="flex";
   function closeModal(){document.getElementById('resultModal').style.display="none";}
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  const welcomeSection = document.getElementById("welcome");
+
+  // Add your hospital-related photos here
+  const images = [
+    "hospital1.jpg",
+    "hospital2.jpg",
+    "hospital3.jpg",
+    "hospital4.jpg"
+  ];
+
+  let index = 0;
+
+  function changeBackground() {
+    welcomeSection.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+
+  // Start with first image
+  changeBackground();
+
+  // Change every 30 seconds (30000 ms)
+  setInterval(changeBackground, 30000);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </body>
 
 </html>
+
