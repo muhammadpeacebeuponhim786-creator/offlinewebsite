@@ -690,64 +690,59 @@
     left: 0;
     width: 100%;
     background: #fff; /* white background bar */
-    padding: 10px;
+    padding: 5px 8px; /* smaller padding */
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    font-size: 20px;
-    font-weight: bold;
   }
 
   .contact-bubble {
     display: inline-block;
-    padding: 8px 14px;
-    border-radius: 12px;
+    padding: 4px 8px; /* smaller badge padding */
+    border-radius: 10px;
     background: #007BFF; /* Blue */
     color: #fff;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,123,255,0.25);
+    box-shadow: 0 2px 6px rgba(0,123,255,0.25);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    line-height: 1.2;
-    min-width: 150px;
-    margin-right: 12px;
-    animation: blink 1.2s infinite; /* only the badge blinks */
+    line-height: 1.1;
+    min-width: 100px;
+    animation: blink 1.2s infinite;
   }
 
   .contact-bubble .name {
     display: block;
     font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 4px;
-    letter-spacing: 0.3px;
+    font-size: 12px;
+    margin-bottom: 2px;
+    letter-spacing: 0.2px;
   }
 
   .contact-bubble .phone {
     display: block;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 11px;
     background: rgba(255,255,255,0.15);
-    padding: 6px 10px;
-    border-radius: 10px;
+    padding: 3px 6px;
+    border-radius: 8px;
   }
 
-  /* Blinking animation for badge */
+  /* Blinking animation */
   @keyframes blink {
     0%, 49% { opacity: 1; }
     50%, 100% { opacity: 0.4; }
   }
 
-  /* Push page content down so it doesn’t hide under fixed header */
+  /* Push page content down so it’s not hidden under fixed header */
   body {
-    padding-top: 70px;
+    padding-top: 45px;
   }
 </style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function(){
-  const hospitalName = document.title;
-
   const header = document.createElement("div");
   header.className = "hospital-header";
 
@@ -758,12 +753,7 @@ document.addEventListener("DOMContentLoaded", function(){
     <span class="phone">0300-4461365</span>
   `;
 
-  const hospitalSpan = document.createElement("span");
-  hospitalSpan.textContent = hospitalName;
-
   header.appendChild(badge);
-  header.appendChild(hospitalSpan);
-
   document.body.insertBefore(header, document.body.firstChild);
 });
 </script>
@@ -892,6 +882,7 @@ document.addEventListener("DOMContentLoaded", function(){
 </body>
 
 </html>
+
 
 
 
