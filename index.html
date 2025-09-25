@@ -31,37 +31,6 @@
 
 
 
-<style>
-  .contact-bubble {
-    display: inline-block;
-    padding: 10px 16px;
-    border-radius: 14px;
-    background: #007BFF; /* Blue */
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,123,255,0.25);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    line-height: 1.2;
-    min-width: 180px;
-    margin-right: 10px;
-    vertical-align: middle; /* aligns nicely with hospital name */
-  }
-  .contact-bubble .name {
-    display: block;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 4px;
-    letter-spacing: 0.3px;
-  }
-  .contact-bubble .phone {
-    display: block;
-    font-weight: 600;
-    font-size: 13px;
-    background: rgba(255,255,255,0.15);
-    padding: 6px 10px;
-    border-radius: 10px;
-  }
-</style>
 
 
 
@@ -714,40 +683,90 @@
 
 
 
+<style>
+  .hospital-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff; /* white background bar */
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .contact-bubble {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: #007BFF; /* Blue */
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,123,255,0.25);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.2;
+    min-width: 150px;
+    margin-right: 12px;
+    animation: blink 1.2s infinite; /* only the badge blinks */
+  }
+
+  .contact-bubble .name {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 4px;
+    letter-spacing: 0.3px;
+  }
+
+  .contact-bubble .phone {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+
+  /* Blinking animation for badge */
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0.4; }
+  }
+
+  /* Push page content down so it doesn’t hide under fixed header */
+  body {
+    padding-top: 70px;
+  }
+</style>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function(){
-    const hospitalText = "FAZAL DIN MEMORIAL GYNAE HOSPITAL 🍼";
+document.addEventListener("DOMContentLoaded", function(){
+  const hospitalName = document.title;
 
-    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-    let node;
-    while(node = walker.nextNode()){
-      if(node.nodeValue.includes(hospitalText)){
-        // Create badge
-        const badge = document.createElement("span");
-        badge.className = "contact-bubble";
-        badge.innerHTML = `
-          <span class="name">SAEED AHMAD</span>
-          <span class="phone">0300-4461365</span>
-        `;
+  const header = document.createElement("div");
+  header.className = "hospital-header";
 
-        // Create hospital span
-        const hospitalSpan = document.createElement("span");
-        hospitalSpan.textContent = hospitalText;
+  const badge = document.createElement("span");
+  badge.className = "contact-bubble";
+  badge.innerHTML = `
+    <span class="name">SAEED AHMAD</span>
+    <span class="phone">0300-4461365</span>
+  `;
 
-        // Replace node with badge + hospital
-        const parent = node.parentNode;
-        parent.replaceChild(hospitalSpan, node);
-        parent.insertBefore(badge, hospitalSpan);
+  const hospitalSpan = document.createElement("span");
+  hospitalSpan.textContent = hospitalName;
 
-        break;
-      }
-    }
-  });
+  header.appendChild(badge);
+  header.appendChild(hospitalSpan);
+
+  document.body.insertBefore(header, document.body.firstChild);
+});
 </script>
-
-
-
-
 
 
 
@@ -873,6 +892,7 @@
 </body>
 
 </html>
+
 
 
 
