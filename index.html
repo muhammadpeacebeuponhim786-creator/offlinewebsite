@@ -9,18 +9,41 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style>
 .contact-bubble {
 display: inline-block;
 padding: 10px 16px;
 border-radius: 14px;
-background: #6a0dad;
+background: #007BFF; /* Blue */
 color: #fff;
 text-align: center;
-box-shadow: 0 6px 18px rgba(106,13,173,0.18);
+box-shadow: 0 6px 18px rgba(0,123,255,0.25);
 font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 line-height: 1.2;
 min-width: 180px;
+margin-right: 10px; /* spacing before hospital name */
 }
 .contact-bubble .name {
 display: block;
@@ -33,7 +56,7 @@ letter-spacing: 0.3px;
 display: block;
 font-weight: 600;
 font-size: 13px;
-background: rgba(255,255,255,0.08);
+background: rgba(255,255,255,0.15);
 padding: 6px 10px;
 border-radius: 10px;
 }
@@ -44,6 +67,52 @@ border-radius: 10px;
 }
 </style>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
@@ -650,39 +719,36 @@ border-radius: 10px;
 
 
 
-
-
-
-
-
 <script>
 document.addEventListener("DOMContentLoaded", function(){
-const phoneText = "0300-4461365";
-// search text nodes for phone number
+const hospitalText = "FAZAL DIN MEMORIAL GYNAE HOSPITAL 🍼";
 const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
 let node;
 while(node = walker.nextNode()){
-if(node.nodeValue.includes(phoneText)){
-const wrapper = document.createElement("div");
+if(node.nodeValue.includes(hospitalText)){
+const wrapper = document.createElement("span");
 wrapper.className = "contact-bubble";
 wrapper.setAttribute("aria-label","Contact Saeed Ahmad");
 wrapper.innerHTML = `
 <span class="name">SAEED AHMAD</span>
-<span class="phone">${phoneText}</span>
+<span class="phone">0300-4461365</span>
 `;
 const parent = node.parentNode;
-const replaced = node.nodeValue.replace(phoneText, "");
-if(replaced.trim() !== ""){ // keep any extra text
-node.nodeValue = replaced;
-parent.insertBefore(wrapper, node.nextSibling);
-} else {
-parent.replaceChild(wrapper, node);
-}
-break; // done after first match
+const replaced = node.nodeValue.replace(hospitalText, "");
+const hospitalSpan = document.createElement("span");
+hospitalSpan.textContent = hospitalText;
+parent.replaceChild(hospitalSpan, node);
+parent.insertBefore(wrapper, hospitalSpan);
+break;
 }
 }
 });
 </script>
+
+
+
+
+
 
 
 
@@ -807,6 +873,7 @@ break; // done after first match
 </body>
 
 </html>
+
 
 
 
