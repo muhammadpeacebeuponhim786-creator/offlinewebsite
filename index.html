@@ -1,293 +1,474 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FAZAL DIN MEMORIAL GYNAE HOSPITAL 🍼👩‍⚕️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>FAZAL DIN MEMORIAL GYNAE HOSPITAL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FAZAL DIN MEMORIAL GYNAE HOSPITAL — Tests & Medicines">
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
   <style>
-    /* Floating logo */
-    .floating-logo {
-      position: fixed;
-      top: 12px;
-      right: 12px;
-      z-index: 9999;
+    :root{
+      --accent:#0077b6;
+      --muted:#f0f8ff;
+      --card:#ffffff;
+      --positive:#25d366;
+      --danger:#ff5252;
     }
-    .floating-logo img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      box-shadow: 0 6px 18px rgba(2,6,23,0.18);
-      transition: transform 8s ease-in-out;
-    }
-    .floating-logo img:hover { transform: rotate(360deg); }
+    *{box-sizing:border-box}
+    body{font-family:"Segoe UI", Roboto, Arial, sans-serif; margin:0; background:#f4f8fb; color:#102028; line-height:1.4;}
+    a{color:inherit}
+    h1,h2,h3{margin:0 0 10px}
 
-    /* Header */
-    .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-      border-radius: 18px;
-      background: linear-gradient(90deg,#fff,#f0f7ff);
-      box-shadow: 0 6px 22px rgba(16,24,40,0.08);
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 10;
-    }
-    .logo {
-      width: 70px; height: 70px; border-radius: 14px;
-      display: grid; place-items: center;
-      font-family: Montserrat, sans-serif; font-weight: 800; font-size: 20px;
-      background: linear-gradient(135deg,#7c5cff,#4be1c3); color: white;
-    }
-    .contact { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .btn-phone, .btn-cta {
-      text-decoration: none; padding: 8px 14px; border-radius: 50px;
-      font-weight: 600; border: none; box-shadow: 0 3px 10px rgba(2,6,23,0.1);
-    }
-    .btn-phone { background: #fff; color: #0b1220; }
-    .btn-cta { background: linear-gradient(90deg,#ff6b6b,#ffb86b); color: white; }
-    .btn-whatsapp {
-      background: #25d366; padding: 10px; border-radius: 50%; color: white;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .btn-whatsapp i { font-size: 20px; }
+    /* Floating rotating logo */
+    .floating-logo{position:fixed; top:12px; right:12px; z-index:20800;}
+    .floating-logo img{width:100px; height:100px; border-radius:50%; box-shadow:0 6px 18px rgba(2,6,23,0.18); animation:fd-spin 14s linear infinite; display:block}
+    .floating-logo img:hover{animation-play-state:paused; transform:scale(1.03)}
+    @keyframes fd-spin{from{transform:rotate(0)} to{transform:rotate(360deg)}}
 
-    /* Hero */
-    .hero {
-      background: url('images/hero-image.jpg') center/cover no-repeat;
-      height: 70vh; display: flex; align-items: center; justify-content: center;
-      position: relative; color: white; text-align: center;
-    }
-    .hero::before {
-      content: ""; position: absolute; top:0;left:0;right:0;bottom:0;
-      background: rgba(0,0,0,0.5);
-    }
-    .hero-content { position: relative; z-index: 1; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
 
-    /* Services */
-    .services { padding:60px 20px; background:#f9f9f9; }
-    .services h2 { text-align:center; margin-bottom:40px; }
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-    .card {
-      background:white; padding:20px; border-radius:12px; text-align:center;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:transform 0.3s;
-    }
-    .card:hover { transform:translateY(-5px); }
-    .card i { font-size:40px; color:#0077b6; margin-bottom:10px; }
 
-    /* Doctors */
-    .doctors { padding:60px 20px; }
-    .doctors h2 { text-align:center; margin-bottom:40px; }
-    .doctor-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-    .doctor {
-      background:white; padding:20px; border-radius:12px; text-align:center;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
-    .doctor img { width:100px; height:100px; border-radius:50%; margin-bottom:10px; }
 
-    /* Facilities */
-    .facilities { padding:60px 20px; background:#f9f9f9; }
-    .facilities h2 { text-align:center; margin-bottom:40px; }
-    .facility-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-    .facility {
-      background:white; padding:20px; border-radius:12px; text-align:center;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
 
-    /* Tests & Prices */
-    .tests-section { padding:60px 20px; margin:40px 0; }
-    .tests-section h2 { text-align:center; color:#0077b6; margin-bottom:20px; }
-    .select-all { text-align:center; margin-bottom:20px; }
-    .tests-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; max-width:1000px; margin:0 auto; }
-    .tests-grid h3 { text-align:center; border-bottom:2px solid #94d2bd; margin-bottom:10px; }
-    .tests-grid label { display:block; padding:6px 10px; background:#f0f9ff; border-radius:6px; margin:6px 0; cursor:pointer; }
-    .tests-grid label:hover { background:#caf0f8; }
-    #liveTotal {
-      font-weight:700; font-size:16px; padding:12px 16px; border-radius:12px;
-      background:#9e9e9e; color:white; position:fixed; bottom:20px; right:20px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:2000; cursor:pointer;
-    }
-    #resultModal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; align-items:center; justify-content:center; background:rgba(0,0,0,0.6); }
-    #modalBox { background:#fff; padding:20px; border-radius:12px; max-width:400px; width:90%; box-shadow:0 4px 12px rgba(0,0,0,0.3); }
 
-    /* Location */
-    .location { padding:60px 20px; }
-    .location h2 { text-align:center; margin-bottom:20px; }
-    .map { text-align:center; }
-    .map iframe { width:100%; max-width:800px; height:400px; border:0; border-radius:12px; }
+
+
+
+
+
+
+
+
+
+
+/* Header - ensure header stays on top of floating logo */
+.site-header {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px;
+  margin: 16px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #fff, #eef7ff);
+  box-shadow: 0 6px 22px rgba(16, 24, 40, 0.06);
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 9999;
+}
+
+.brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7c5cff, #4be1c3);
+  font-size: 20px;
+}
+
+.site-header h1 {
+  font-size: 1.15rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 12px;   /* pushes it slightly downward */
+}
+
+.btn-phone,
+.btn-cta {
+  padding: 4px 8px;     /* smaller buttons */
+  font-size: 0.75rem;   /* smaller text */
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-phone {
+  background: #fff;
+  color: #0b1220;
+  box-shadow: 0 2px 6px rgba(2,6,23,0.06); /* softer shadow */
+}
+
+.btn-cta {
+  background: linear-gradient(90deg, #ff6b6b, #ffb86b);
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Welcome / Hero */
+    #welcome{padding:76px 20px; color:#fff; text-align:center; border-radius:12px; margin:16px; background-size:cover; background-position:center; position:relative; overflow:hidden}
+    #welcome::before{content:""; position:absolute; inset:0; background:rgba(0,0,0,0.35)}
+    #welcome .inner{position:relative; z-index:1; max-width:1000px; margin:auto}
+    #welcome h2{font-size:2.2rem; margin-bottom:6px}
+    #welcome p{font-size:1.05rem; margin:0}
+
+    /* Sections */
+    .section{margin:16px; padding:20px; background:var(--card); border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+    .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px}
+    .card{padding:18px; background:#fff; border-radius:10px; box-shadow:0 6px 18px rgba(2,6,23,0.04); text-align:center}
+    .card i{font-size:28px; color:var(--accent); margin-bottom:8px}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tests layout */
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr)); /* always 2 columns */
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0; /* align left */
+}
+.tests-grid h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+.tests-grid label {
+  display: block;
+  padding: 8px 10px;
+  background: var(--muted);
+  border-radius: 8px;
+  margin: 6px 0;
+  cursor: pointer;
+}
+.tests-grid label:hover {
+  background: #d9f6ff;
+}
+
+/* Medicines — accordion + grid inside */
+.med-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.med-controls input[type="search"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d6e9fb;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two accordions side by side */
+  gap: 20px; /* space between accordions */
+  max-width: none; /* remove narrow width limit */
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion-item {
+  background: #f9fdff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+.accordion-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #024760;
+}
+.accordion-header .count {
+  color: #006f9a;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.accordion-body {
+  padding: 12px 14px;
+  display: none;
+  border-top: 1px dashed rgba(0,0,0,0.04);
+}
+.accordion-body.open {
+  display: block;
+}
+
+/* Medicine grid aligned left */
+.med-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(160px, 1fr)); /* always 2 columns */
+  gap: 12px;
+  justify-content: start;
+}
+.med-grid label {
+  display: block;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #e8f5ff;
+}
+.med-grid label:hover {
+  background: #f0fbff;
+}
+
+/* Responsive: single column on small screens */
+@media (max-width: 600px) {
+  .tests-grid {
+    grid-template-columns: 1fr;
+  }
+  .med-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Floating total */
+    #liveTotal{position:fixed; right:20px; bottom:120px; background:var(--accent); color:#fff; padding:12px 16px; border-radius:12px; font-weight:700; box-shadow:0 8px 22px rgba(0,0,0,0.2); z-index:1500; cursor:pointer}
+    /* Modal */
+    #resultModal{display:none; position:fixed; inset:0; align-items:center; justify-content:center; background:rgba(0,0,0,0.55); z-index:1600}
+    #modalBox{background:#fff; padding:18px; border-radius:12px; max-width:680px; width:92%; box-shadow:0 8px 22px rgba(0,0,0,0.18)}
+    #modalBox h3{margin-bottom:10px}
+
+    /* Clear All button inside modal */
+    .btn-clear{background:var(--danger); color:#fff; padding:8px 12px; border-radius:8px; border:none; cursor:pointer}
+
+    /* Floating WhatsApp */
+    .btn-whatsapp-floating{position:fixed; right:18px; bottom:18px; width:56px; height:56px; border-radius:50%; background:var(--positive); color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 26px rgba(0,0,0,0.22); z-index:1700; text-decoration:none; font-size:22px}
+    .btn-whatsapp-floating:hover{transform:translateY(-6px); transition:transform .12s}
+    .whatsapp-label{position:fixed; right:86px; bottom:26px; background:rgba(2,6,23,0.06); padding:8px 10px; border-radius:999px; font-weight:700; z-index:1700; box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+
+    /* Back-to-top */
+    .back-to-top{position:fixed; left:50%; transform:translateX(-50%); bottom:18px; width:52px; height:52px; border-radius:50%; border:2px solid var(--accent); background:transparent; color:var(--accent); display:flex; align-items:center; justify-content:center; z-index:1400; cursor:pointer}
+    .back-to-top:hover{background:var(--accent); color:#fff; transform:translateX(-50%) scale(1.03)}
 
     /* Footer */
-    .site-footer {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px; margin-top: 40px; border-radius: 16px;
-      background: linear-gradient(90deg,#fffbf5,#f7fbff);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-    .social a {
-      margin-left: 10px; font-size: 1.4rem; padding: 10px; border-radius: 50%; color: white;
-      display: inline-flex; justify-content: center; align-items: center;
-    }
-    .social a.facebook { background: #1877f2; }
-    .social a.instagram { background: #e1306c; }
-    .social a.whatsapp { background: #25d366; }
+    .site-footer{display:flex; justify-content:space-between; align-items:center; padding:16px; margin:16px; border-radius:12px; background:linear-gradient(90deg,#fffbf5,#f7fbff); box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .social a{margin-left:8px; display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:8px; color:#fff; text-decoration:none}
+    .social a.facebook{background:#1877f2} .social a.instagram{background:#e1306c} .social a.whatsapp{background:#25d366}
+    @media (max-width:720px){ .site-header h1{font-size:1rem} .med-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))} .floating-logo{display:none} .whatsapp-label{right:74px} }
+
+    /* small utilities */
+    table.details{width:100%;border-collapse:collapse}
+    table.details td, table.details th{padding:6px;border-bottom:1px solid #f1f5f9;text-align:left}
   </style>
 </head>
 <body>
 
-<!-- Floating logo -->
-<a href="index.html" class="floating-logo">
-  <img src="IMG-20250904-WA0005.jpg" alt="FD Logo">
-</a>
+  <!-- Floating logo -->
+  <a href="#" class="floating-logo" aria-label="Home">
+    <img src="IMG-20250904-WA0005.jpg" alt="FD Logo">
+  </a>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="brand">
-    <div class="logo">FD</div>
-    <div>
-      <h1>FAZAL DIN MEMORIAL <span style="color:#4b9fff">GYNAE</span> HOSPITAL 🍼</h1>
-      <p>College Road, Narowal · CARING FOR MOTHERS ❤️ & NEWBORNS 👶</p>
-      <p>Administrator: <strong>Dr. Sheeba Saeed</strong></p>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">FD</div>
+      <div>
+        <h1>FAZAL DIN MEMORIAL <span style="color:#4b9fff">GYNAE</span> HOSPITAL</h1>
+        <p style="margin-top:6px;color:#456">College Road, Narowal · Caring for Mothers & Newborns</p>
+      </div>
     </div>
-  </div>
-  <div class="contact">
-    <a href="tel:03004461365" class="btn-phone"><i class="fa-solid fa-phone"></i> SAEED AHMED 0300-4461365</a>
-    <a href="https://wa.me/923004461365" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="#appointment" class="btn-cta">MAKE APPOINTMENT</a>
-  </div>
-</header>
 
+    <div class="contact">
+      <a href="tel:03004461365" class="btn-phone"><i class="fa-solid fa-phone"></i>&nbsp;0300-4461365</a>
+      <a class="btn-cta" href="#appointment">MAKE APPOINTMENT</a>
+    </div>
+  </header>
 
+  <!-- Welcome / Slideshow -->
+  <section id="welcome" style="background-image:url('IMG-20250904-WA0005.jpg')">
+    <div class="inner">
+      <h2>Welcome to FAZAL DIN MEMORIAL GYNAE HOSPITAL</h2>
+      <p>Compassionate care for mothers & newborns — modern facilities & expert staff.</p>
+    </div>
+  </section>
 
+  <!-- Services -->
+  <section class="section" aria-labelledby="servicesHeading">
+    <h2 id="servicesHeading">OUR SERVICES</h2>
+    <div class="cards" style="margin-top:12px">
+      <div class="card"><i class="fa-solid fa-baby"></i><h3>Maternity Care</h3><p>Comprehensive prenatal & postnatal support.</p></div>
+      <div class="card"><i class="fa-solid fa-heart-pulse"></i><h3>Gynecology</h3><p>Expert diagnosis & treatment for women's health.</p></div>
+      <div class="card"><i class="fa-solid fa-vial"></i><h3>Lab Tests</h3><p>Accurate, affordable, and fast test results.</p></div>
+      <div class="card"><i class="fa-solid fa-stethoscope"></i><h3>Consultations</h3><p>Friendly, professional medical advice for families.</p></div>
+    </div>
+  </section>
 
+  <!-- Doctors -->
+  <section class="section">
+    <h2>Our Doctors</h2>
+    <div style="margin-top:12px; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px">
+      <div class="card"><h3>Dr. Hamna Sajawal</h3><p>Gynecologist</p></div>
+      <div class="card"><h3>Dr. Abeera Azmat</h3><p>Gynecologist</p></div>
+    </div>
+  </section>
 
+  <!-- Nurses -->
+  <section class="section">
+    <h2>Our Nursing Team</h2>
+    <div style="margin-top:12px; display:flex; gap:12px; flex-wrap:wrap">
+      <div class="card" style="flex:1;min-width:140px;"><h3>Muzdalifa Imtiaz</h3></div>
+      <div class="card" style="flex:1;min-width:140px;"><h3>Nighat</h3></div>
+      <div class="card" style="flex:1;min-width:140px;"><h3>Shabana</h3></div>
+      <div class="card" style="flex:1;min-width:140px;"><h3>Saima Khan</h3></div>
+      <div class="card" style="flex:1;min-width:140px;"><h3>Rabia</h3></div>
+    </div>
+  </section>
 
+  <!-- Tests -->
+  <section id="tests" class="section">
+    <h2>🧪 Available Tests</h2>
 
+    <div class="select-all" style="margin-top:8px;">
+      <label><input type="checkbox" id="selectAll"> <strong>SELECT ALL TESTS</strong></label>
+    </div>
 
+    <div class="tests-grid" style="margin-top:10px;">
+      <div>
+        <h3>Blood Tests</h3>
+        <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label>
+        <label><input type="checkbox" class="test" value="700" data-name="CBC"> CBC (Rs. 700)</label>
+        <label><input type="checkbox" class="test" value="300" data-name="HB%"> HB% (Rs. 300)</label>
+        <label><input type="checkbox" class="test" value="200" data-name="Blood Group"> Blood Group (Rs. 200)</label>
+        <label><input type="checkbox" class="test" value="100" data-name="BSR"> BSR (Rs. 100)</label>
+      </div>
 
+      <div>
+        <h3>Hormone Tests</h3>
+        <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label>
+        <label><input type="checkbox" class="test" value="1500" data-name="FSH"> FSH (Rs. 1500)</label>
+        <label><input type="checkbox" class="test" value="1500" data-name="LH"> LH (Rs. 1500)</label>
+        <label><input type="checkbox" class="test" value="2200" data-name="Beta HCG"> Beta HCG (Rs. 2200)</label>
+      </div>
 
+      <div>
+        <h3>Infectious Diseases</h3>
+        <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label>
+        <label><input type="checkbox" class="test" value="1200" data-name="HCV ELIZA"> HCV ELIZA (Rs. 1200)</label>
+        <label><input type="checkbox" class="test" value="1200" data-name="HBS ELIZA"> HBS ELIZA (Rs. 1200)</label>
+        <label><input type="checkbox" class="test" value="4000" data-name="HCV PCR"> HCV PCR (Rs. 4000)</label>
+      </div>
 
-
-
-
-  <section id="welcome" class="welcome-section">
-  <h2>Welcome to Our Hospital</h2>
-  <p>We provide compassionate care for mothers & newborns 👶💖</p>
+      <div>
+        <h3>Biochemistry</h3>
+        <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label>
+        <label><input type="checkbox" class="test" value="700" data-name="RFTs"> RFTs (Rs. 700)</label>
+        <label><input type="checkbox" class="test" value="1000" data-name="LFT"> LFT (Rs. 1000)</label>
+        <label><input type="checkbox" class="test" value="700" data-name="Lipid Profile"> Lipid Profile (Rs. 700)</label>
+      </div>
+    </div>
   </section>
 
 
@@ -297,7 +478,6 @@
 
 
 
-  
 
 
 
@@ -309,302 +489,656 @@
 
 
 
-  
 
-<!-- Services -->
-<section class="services">
-  <h2>OUR SERVICES 👩‍⚕️</h2>
-  <div class="cards">
-    <div class="card"><i class="fa-solid fa-baby"></i><h3>Maternity Care</h3><p>Comprehensive prenatal & postnatal support.</p></div>
-    <div class="card"><i class="fa-solid fa-heart-pulse"></i><h3>Gynecology</h3><p>Expert diagnosis & treatment for women’s health.</p></div>
-    <div class="card"><i class="fa-solid fa-vial"></i><h3>Lab Tests</h3><p>Accurate, affordable, and fast test results.</p></div>
-    <div class="card"><i class="fa-solid fa-stethoscope"></i><h3>Consultations</h3><p>Friendly, professional medical advice for families.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Medicines (Accordion) -->
+<section class="section" aria-labelledby="medicinesHeading">
+  <h2 id="medicinesHeading">💊 Available Medicines</h2>
+
+  <div class="med-controls" style="margin-top:10px;">
+    <input type="search" id="medSearch" placeholder="Search medicines (e.g., duphaston, glove)...">
+    <button id="medClearBtn" style="padding:10px 12px;border-radius:8px;background:var(--accent);color:#fff;border:none;cursor:pointer">Clear</button>
   </div>
-</section>
 
-<!-- Doctors -->
-<section class="doctors">
-  <h2>OUR DOCTORS 👨‍⚕️👩‍⚕️</h2>
-  <div class="doctor-grid">
-    <div class="doctor"><img src="doctor1.jpg" alt="Dr. Sheeba"><h3>Dr. Sheeba Saeed</h3><p>Gynecologist</p></div>
-    <div class="doctor"><img src="doctor2.jpg" alt="Dr. Ali"><h3>Dr. Ali Raza</h3><p>Consultant</p></div>
-  </div>
-</section>
-
-<!-- Nurses -->
-<section class="nurses-section">
-  <h2>OUR NURSING TEAM 👩‍⚕️</h2>
-  <div class="nurses">
-    <div class="nurse-card"><div class="avatar">MI</div><div class="name">Muzdalifa Imtiaz</div></div>
-    <div class="nurse-card"><div class="avatar">N</div><div class="name">Nighat</div></div>
-    <div class="nurse-card"><div class="avatar">S</div><div class="name">Shabana</div></div>
-    <div class="nurse-card"><div class="avatar">A</div><div class="name">Amina</div></div>
-    <div class="nurse-card"><div class="avatar">Z</div><div class="name">Zunaira</div></div>
-  </div>
-  <p class="nurse-note">💖 Providing 24/7 neonatal support with dedication and care 👶</p>
-</section>
-
-<style>
-
-
-
-
-
-
-
-
-
-
-#welcome {
-  padding: 80px 20px;
-  color: white;
-  text-align: center;
-  border-radius: 16px;
-  background: #555; /* fallback grey in case images don't load */
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  overflow: hidden;
-}
-
-
-
-
-
-
-#welcome::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5); /* semi-transparent black */
-  z-index: 0;
-}
-#welcome h2,
-#welcome p {
-  position: relative;
-  z-index: 1; /* text stays above overlay */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-.nurses-section {
-  background: #fff5f8;
-  border-radius: 16px;
-  padding: 50px 20px;
-  margin: 40px 0;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-}
-.nurses-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 1.8rem;
-  color: #d6336c;
-}
-.nurses {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-}
-.nurse-card {
-  background: #fff0f5;
-  border: 2px solid #ff9ec4;
-  border-radius: 12px;
-  padding: 15px;
-  text-align: center;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-.nurse-card:hover {
-  background: #ffe6ef;
-  border-color: #ff6b9c;
-  transform: scale(1.05);
-}
-.avatar {
-  width: 50px; height: 50px;
-  margin: 0 auto 10px;
-  border-radius: 50%;
-  background: linear-gradient(135deg,#ff6b9c,#ff9ec4);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.name { font-size: 15px; color: #333; }
-
-
-
-.nurse-note {
-  text-align: center;
-  margin-top: 20px;
-  color: #d6336c;
-  font-size: 1rem;
-  font-weight: 500;
-}
-</style>
-
-<!-- Facilities -->
-<section class="facilities">
-  <h2>OUR FACILITIES 🏥</h2>
-  <div class="facility-grid">
-    <div class="facility"><h3>Modern Operation Theatre</h3></div>
-    <div class="facility"><h3>Labor Rooms</h3></div>
-    <div class="facility"><h3>Well-equipped Lab</h3></div>
-    <div class="facility"><h3>Pharmacy</h3></div>
-  </div>
-</section>
-
-<!-- Tests -->
-<section id="tests" class="tests-section">
-  <h2>🧪 AVAILABLE TESTS</h2>
-  <div class="select-all">
-    <label><input type="checkbox" id="selectAll"> <strong>SELECT ALL TESTS</strong></label>
-  </div>
-  <div class="tests-grid">
-    <div>
-      <h3>🩸 BLOOD TESTS</h3>
-      <label><input type="checkbox" class="test" value="500" data-name="CBC"> CBC (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="HB%"> HB% (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="Blood Group"> Blood Group (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="BSR"> BSR (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="ESR"> ESR (Rs. 500)</label>
-    </div>
-    <div>
-      <h3>🧬 HORMONE TESTS</h3>
-      <label><input type="checkbox" class="test" value="500" data-name="FSH"> FSH (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="LH"> LH (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="Prolactin"> Prolactin (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="Testosterone"> Testosterone (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="Progesterone"> Progesterone (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="Insulin"> Insulin (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="T3 T4 TSH"> T3 T4 TSH (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="TSH"> TSH (Rs. 500)</label>
-    </div>
-  </div>
-  <div id="liveTotal"><span id="liveText">0 tests | Total: Rs. 0</span></div>
-  <div id="resultModal"><div id="modalBox"><h3>SELECTED TESTS</h3><div id="modalContent"></div><button onclick="closeModal()">Close</button></div></div>
-</section>
-
-
-
-
-<!-- ================= LOCATION & CONTACT ================= -->
-<section id="location" class="location-section">
-  <div class="location-info">
-    <h2>📍 Our Location</h2>
-    <p>College Road, Narowal — drop by or call ahead for appointments and scans.</p>
-
-    <div class="contact-actions">
-      <a href="tel:03004461365" class="btn-contact">📞 0300-4461365</a>
-      <a href="https://wa.me/923004461365" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+  <div id="medicineAccordion" class="accordion">
+
+    <!-- ABBOT -->
+    <div class="accordion-item" data-company="ABBOT">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>ABBOT</h4>
+        <div class="count">10 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="63" data-name="DUPHASTON"> 10 - DUPHASTON (Rs. 63)</label>
+          <label><input type="checkbox" class="price-check" value="11" data-name="IBRET FOLIC 500 GRADUMET"> 182 - IBRET FOLIC 500 GRADUMET (Rs. 11)</label>
+          <label><input type="checkbox" class="price-check" value="180" data-name="T-T- INJ"> 196 - T-T- INJ (Rs. 180)</label>
+          <label><input type="checkbox" class="price-check" value="50" data-name="SURGICAL TAPE KIT"> 199 - SURGICAL TAPE KIT (Rs. 50)</label>
+          <label><input type="checkbox" class="price-check" value="1000" data-name="MLITE-1"> 200 - MLITE-1 (Rs. 1000)</label>
+          <label><input type="checkbox" class="price-check" value="50" data-name="D-GEST"> 211 - D-GEST (Rs. 50)</label>
+          <label><input type="checkbox" class="price-check" value="88" data-name="ENZ-10"> 213 - ENZ-10 (Rs. 88)</label>
+          <label><input type="checkbox" class="price-check" value="48" data-name="ENZ-10 50 MG"> 218 - ENZ-10 50 MG (Rs. 48)</label>
+          <label><input type="checkbox" class="price-check" value="13" data-name="RIDOSPA 80MG TAB"> 180 - RIDOSPA 80MG TAB (Rs. 13)</label>
+          <label><input type="checkbox" class="price-check" value="50" data-name="GRASIRON TAB"> 203 - GRASIRON TAB (Rs. 50)</label>
+        </div>
+      </div>
     </div>
 
-    <div class="details">
-      <p><strong>Visiting Hours:</strong><br>Mon–Sun · 9:00 AM – 9:00 PM</p>
-      <p><strong>Administrator:</strong> Dr. Sheeba Saeed</p>
+    <!-- AMROS -->
+    <div class="accordion-item" data-company="AMROS">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>AMROS</h4>
+        <div class="count">2 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="12" data-name="SYNTO INJ"> 14 - SYNTO INJ (Rs. 12)</label>
+          <label><input type="checkbox" class="price-check" value="150" data-name="LIQUID PARFEEN"> 33 - LIQUID PARFEEN (Rs. 150)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANSELL -->
+    <div class="accordion-item" data-company="ANSELL">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>ANSELL</h4>
+        <div class="count">3 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="250" data-name="SURGICAL GLOVES NO 7"> 15 - SURGICAL GLOVES NO 7 (Rs. 250)</label>
+          <label><input type="checkbox" class="price-check" value="251" data-name="SURGICAL GLOVES NO 7.5"> 169 - SURGICAL GLOVES NO 7.5 (Rs. 251)</label>
+          <label><input type="checkbox" class="price-check" value="250" data-name="SURGICAL GLOVES NO 6.5"> 119 - SURGICAL GLOVES NO 6.5 (Rs. 250)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- APSIS -->
+    <div class="accordion-item" data-company="APSIS">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>APSIS</h4>
+        <div class="count">7 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="140" data-name="ETT TUBE"> 12 - ETT TUBE (Rs. 140)</label>
+          <label><input type="checkbox" class="price-check" value="44" data-name="MOVEGUT SACHET"> 13 - MOVEGUT SACHET (Rs. 44)</label>
+          <label><input type="checkbox" class="price-check" value="140" data-name="DEXTOL WATER 5%1000ML"> 16 - DEXTOL WATER 5%1000ML (Rs. 140)</label>
+          <label><input type="checkbox" class="price-check" value="130" data-name="NS 1000 ML"> 17 - NS 1000 ML (Rs. 130)</label>
+          <label><input type="checkbox" class="price-check" value="150" data-name="RL 1000 ML"> 18 - RL 1000 ML (Rs. 150)</label>
+          <label><input type="checkbox" class="price-check" value="120" data-name="RL 500 ML"> 19 - RL 500 ML (Rs. 120)</label>
+          <label><input type="checkbox" class="price-check" value="35" data-name="CRAN BERRY SACHET"> 36 - CRAN BERRY SACHET (Rs. 35)</label>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- BROOKS -->
+    <div class="accordion-item" data-company="BROOKS">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>BROOKS</h4>
+        <div class="count">2 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="150" data-name="PYODINE 30ML BROOKS"> 30 - PYODINE 30ML BROOKS (Rs. 150)</label>
+          <label><input type="checkbox" class="price-check" value="250" data-name="PYODINE 60ML"> 190 - PYODINE 60ML (Rs. 250)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- BYER -->
+    <div class="accordion-item" data-company="BYER">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>BYER</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="14" data-name="PRIMULATA N TAB"> 32 - PRIMULATA N TAB (Rs. 14)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- CCL -->
+    <div class="accordion-item" data-company="CCL">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>CCL</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="3" data-name="ASCARD 75MG TAB"> 209 - ASCARD 75MG TAB (Rs. 3)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAVIS PHARMACEUTICAL -->
+    <div class="accordion-item" data-company="DAVIS PHARMACEUTICAL">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>DAVIS PHARMACEUTICAL</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="230" data-name="LONTUR LOTION"> 11 - LONTUR LOTION (Rs. 230)</label>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- GT PHARMA CARE -->
+    <div class="accordion-item" data-company="GT PHARMA CARE">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>GT PHARMA CARE</h4>
+        <div class="count">4 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="21" data-name="CAGEN-D"> 51 - CAGEN-D (Rs. 21)</label>
+          <label><input type="checkbox" class="price-check" value="260" data-name="K-LOT 10MG INJ ADULT"> 52 - K-LOT 10MG INJ ADULT (Rs. 260)</label>
+          <label><input type="checkbox" class="price-check" value="360" data-name="ED-3 DROPS"> 53 - ED-3 DROPS (Rs. 360)</label>
+          <label><input type="checkbox" class="price-check" value="70" data-name="K-LOT 1MG/ML INJ"> 159 - K-LOT 1MG/ML INJ (Rs. 70)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- HILTON -->
+    <div class="accordion-item" data-company="HILTON">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>HILTON</h4>
+        <div class="count">4 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="152" data-name="TRANSMIN INJ 500MG"> 60 - TRANSMIN INJ 500MG (Rs. 152)</label>
+          <label><input type="checkbox" class="price-check" value="40" data-name="TRANSMIN CAP 500MG"> 61 - TRANSMIN CAP 500MG (Rs. 40)</label>
+          <label><input type="checkbox" class="price-check" value="48" data-name="CRAN MAX"> 183 - CRAN MAX (Rs. 48)</label>
+          <label><input type="checkbox" class="price-check" value="65" data-name="RIMONA SACHET"> 184 - RIMONA SACHET (Rs. 65)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ICI -->
+    <div class="accordion-item" data-company="ICI">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>ICI</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="295" data-name="EXEF INJ 1GM"> 67 - EXEF INJ 1GM (Rs. 295)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDUS -->
+    <div class="accordion-item" data-company="INDUS">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>INDUS</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="109" data-name="HARICEF CAP"> 54 - HARICEF CAP (Rs. 109)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- LYF PHARMA -->
+    <div class="accordion-item" data-company="LYF PHARMA">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>LYF PHARMA</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="23" data-name="DOVRIN DS TAB"> 35 - DOVRIN DS TAB (Rs. 23)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROYAL OZONE -->
+    <div class="accordion-item" data-company="ROYAL OZONE">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>ROYAL OZONE</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="30" data-name="PAMPER"> 92 - PAMPER (Rs. 30)</label>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- HINOUCON -->
+    <div class="accordion-item" data-company="HINOUCON">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>HINOUCON</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="10" data-name="ENVEPE TAB"> 179 - ENVEPE TAB (Rs. 10)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ATCO LABORATORIES -->
+    <div class="accordion-item" data-company="ATCO LABORATORIES">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>ATCO LABORATORIES</h4>
+        <div class="count">2 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="3" data-name="LOPRIN 75MG TAB"> 64 - LOPRIN 75MG TAB (Rs. 3)</label>
+          <label><input type="checkbox" class="price-check" value="4000" data-name="GYNELLA NATAL FERTI GEL"> 189 - GYNELLA NATAL FERTI GEL (Rs. 4000)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARENT HODGSON -->
+    <div class="accordion-item" data-company="BARRENT HODGSON">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>BARRENT HODGSON</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="34" data-name="XYLOAID INJ 10ML"> 84 - XYLOAID INJ 10ML (Rs. 34)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- HARMAN PHARMA -->
+    <div class="accordion-item" data-company="HARMAN PHARMA">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>HARMAN PHARMA</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="125" data-name="MYUCIN SYP"> 66 - MYUCIN SYP (Rs. 125)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- HARISON PHARMA -->
+    <div class="accordion-item" data-company="HARISON PHARMA">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>HARISON PHARMA</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="23" data-name="DOVRIN DS TAB"> 35 - DOVRIN DS TAB (Rs. 23)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAMMI -->
+    <div class="accordion-item" data-company="SAMMI">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>SAMMI</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="139" data-name="GYNOSPORIN TAB"> 77 - GYNOSPORIN TAB (Rs. 139)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- ZAFA -->
+    <div class="accordion-item" data-company="ZAFA">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>ZAFA</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="330" data-name="HYDROPREGESTRON 1 ML INJ"> 150 - HYDROPREGESTRON 1 ML INJ (Rs. 88)</label>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- WINBRAND BIOTEX -->
+    <div class="accordion-item" data-company="WINBRAND BIOTEX">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>WINBRAND BIOTEX</h4>
+        <div class="count">2 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="350" data-name="INFUMED IRON SUCROSE 5 ML INJ"> 70 - INFUMED IRON SUCROSE 5 ML INJ (Rs. 350)</label>
+          <label><input type="checkbox" class="price-check" value="320" data-name="WINFER IRON SUCROSE 5 ML INJ"> 117 - WINFER IRON SUCROSE 5 ML INJ (Rs. 320)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPENCER PHARMA -->
+    <div class="accordion-item" data-company="SPENCER PHARMA">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>SPENCER PHARMA</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="290" data-name="FUNGICID CREAM"> 76 - FUNGICID CREAM (Rs. 290)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- OBS PHARMA -->
+    <div class="accordion-item" data-company="OBS PHARMA">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>OBS PHARMA</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="495" data-name="BIOCAL MUP SACHET"> 162 - BIOCAL MUP SACHET (Rs. 495)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- HILTON PHARMA -->
+    <div class="accordion-item" data-company="HILTON PHARMA">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>HILTON PHARMA</h4>
+        <div class="count">2 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="12" data-name="GESTOFIT TAB"> 206 - GESTOFIT TAB (Rs. 12)</label>
+          <label><input type="checkbox" class="price-check" value="6" data-name="CHERIFER TAB"> 208 - CHERIFER TAB (Rs. 6)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEARLE -->
+    <div class="accordion-item" data-company="SEARLE">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>SEARLE</h4>
+        <div class="count">2 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="12" data-name="ARINAC FORTE TAB"> 210 - ARINAC FORTE TAB (Rs. 12)</label>
+          <label><input type="checkbox" class="price-check" value="6" data-name="NUSEAL 99 MG TAB"> 212 - NUSEAL 99 MG TAB (Rs. 6)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- VENUS -->
+    <div class="accordion-item" data-company="VENUS">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>VENUS</h4>
+        <div class="count">1 item</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="20" data-name="TEARS NATURALE EYE DROP"> 214 - TEARS NATURALE EYE DROP (Rs. 20)</label>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Live Total button -->
+  <div id="liveTotal" title="Click to view selected items">
+    <span id="liveText">0 selected | Total: Rs. 0</span>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- Floating WhatsApp button (prefilled message) + visible label with name and number -->
+  <div class="whatsapp-label" aria-hidden="true">SAEED AHMAD — 0300-4461365</div>
+  <a class="btn-whatsapp-floating" href="https://wa.me/923004461365?text=Hello%20Saeed%20Ahmad%2C%20I%20need%20information%20about%20tests%2Fmedicines." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp with Saeed Ahmad">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Modal -->
+  <div id="resultModal">
+    <div id="modalBox">
+      <h3>Selected Items</h3>
+      <div id="modalContent" style="max-height:50vh; overflow:auto; margin-bottom:12px"></div>
+      <div style="display:flex; gap:8px; justify-content:flex-end;">
+        <button class="btn-clear" id="clearAllBtn">Clear All</button>
+        <button id="closeModalBtn" style="padding:8px 12px; border-radius:8px; border:none; background:#0077b6; color:#fff; cursor:pointer">Close</button>
+      </div>
     </div>
   </div>
 
-  <div class="map">
-    <!-- Google Maps Embed -->
-    <iframe
-      src="https://www.google.com/maps?q=32.0950213, 74.8813913&hl=en&z=16&output=embed"
-      
-      
-      
-      
-      
-      
-      
-      width="100%"
-      height="400"
-      style="border:0; border-radius:12px;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-
-    <!-- Clickable Map Link -->
-    <p style="text-align:center; margin-top:10px;">
-      <a href="https://maps.google.com/?q=32.0999,74.8731" target="_blank" style="color:#0077b6; font-weight:600; text-decoration:none;">
-        👉 Open in Google Maps
-      </a>
-    </p>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div><h3>FAZAL DIN MEMORIAL GYNAE HOSPITAL 👩‍⚕️</h3><p>College Road, Narowal</p></div>
-  <div><p>© <span id="year"></span> ALL RIGHTS RESERVED</p><p>MADE WITH ♥ FOR THE COMMUNITY</p></div>
-  <div class="social">
-    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/923004461365" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-  </div>
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  function updateModal() {
-    let boxes=document.querySelectorAll('.test:checked'); let total=0, count=0, list="<ul>";
-    boxes.forEach(cb=>{ total+=+cb.value; count++; list+=`<li>${cb.dataset.name} - Rs. ${cb.value}</li>`; });
-    list+="</ul>"; document.getElementById('modalContent').innerHTML=(count? list+`<strong>Total: Rs. ${total}</strong>`:"No test selected!");
-    document.getElementById('liveText').textContent=`${count} test${count!==1?"s":""} | Total: Rs. ${total}`;
-  }
-  document.querySelectorAll('.test').forEach(cb=>cb.addEventListener('change',updateModal));
-  document.getElementById('selectAll').addEventListener('change',function(){document.querySelectorAll('.test').forEach(cb=>cb.checked=this.checked);updateModal()});
-  document.getElementById('liveTotal').onclick=()=>document.getElementById('resultModal').style.display="flex";
-  function closeModal(){document.getElementById('resultModal').style.display="none";}
-</script>
 
 
 
@@ -634,298 +1168,264 @@
 
 
 
+
+
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-up-long"></i></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Location (Google Maps embed) -->
+  <section class="section" id="location">
+    <h2>Find Us</h2>
+    <p style="margin-bottom:10px">College Road, Narowal — open map or get directions</p>
+    <div style="height:300px; border-radius:10px; overflow:hidden">
+      <iframe title="Fazal Din Memorial Gynae Hospital - Map" src="https://www.google.com/maps?q=Fazal%20Din%20Memorial%20Gynae%20Hospital%20Narowal&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div>© <span id="year"></span> FAZAL DIN MEMORIAL GYNAE HOSPITAL</div>
+    <div class="social">
+      <a class="facebook" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="instagram" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a class="whatsapp" href="https://wa.me/923004461365" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <!-- ============== SCRIPTS ============== -->
   <script>
-  const welcomeSection = document.getElementById("welcome");
+    (function(){
+      'use strict';
 
-  // Add your hospital-related photos here
-  const images = [
-    "IMG-20250904-WA0005.jpg",
-    "IMG-20250918-WA0062.jpg",
-    "IMG-20250918-WA0064.jpg",
-    "IMG-20250918-WA0066.jpg",
-    "images (1).jpeg",
-    "images (2).jpeg",
-    "images (5)~2.jpg"
-  ];
+      // Year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  let index = 0;
+      // Slideshow backgrounds for #welcome (wrapped in try/catch to avoid breaking rest of script)
+      try{
+        const welcome = document.getElementById('welcome');
+        if(welcome){
+          
+        const images = [
+        "IMG-20250904-WA0005.jpg",
+  "IMG-20250912-WA0082.jpg",
+  "IMG-20250925-WA0008.jpeg",
+  "IMG-20250925-WA0013.jpeg",
+  "IMG-20250926-WA0043.jpeg",
+  "IMG-20250926-WA0045.jpeg",
+  "IMG-20250926-WA0063.jpeg",
+  "IMG-20250926-WA0135.jpeg",
+  "IMG-20250927-WA0127.jpeg",
+  "IMG-20250917-WA0116.jpeg",
+  "IMG-20250917-WA0122.jpeg",
+  "IMG-20250918-WA0063.jpg",
+  "IMG-20250918-WA0065.jpg"
 
-  function changeBackground() {
-    welcomeSection.style.backgroundImage = `url('${images[index]}')`;
-    index = (index + 1) % images.length;
-  }
+          ];
+          let i=0;
+          function setBg(){
+            welcome.style.backgroundImage = `url('${images[i]}')`;
+           i=(i+1)%images.length;
+          }
+          setBg();
+          // store interval id so we can clear if needed
+          const bgInterval = setInterval(setBg,5000);
+        }
+      }catch(e){ console.warn('Welcome slideshow error', e); }
 
-  // Start with first image
-  changeBackground();
+      // Accordion behavior (expand/collapse, keyboard accessible)
+      document.querySelectorAll('.accordion-item').forEach(item=>{
+        const header = item.querySelector('.accordion-header');
+        const body = item.querySelector('.accordion-body');
+        const toggle = ()=>{
+          const isOpen = header.getAttribute('aria-expanded') === 'true';
+          header.setAttribute('aria-expanded', String(!isOpen));
+          body.setAttribute('aria-hidden', String(isOpen));
+          body.classList.toggle('open', !isOpen);
+        };
+        header.addEventListener('click', ()=>{
+          // single open behavior: close others
+          document.querySelectorAll('.accordion-item .accordion-body').forEach(b=>{ if(b!==body){ b.classList.remove('open'); b.setAttribute('aria-hidden','true'); b.previousElementSibling && b.previousElementSibling.setAttribute('aria-expanded','false'); }});
+          toggle();
+        });
+        header.addEventListener('keydown', (ev)=>{ if(ev.key==='Enter' || ev.key===' '){ ev.preventDefault(); header.click(); }});
+      });
 
-  // Change every 5 seconds (5000 ms)
-  setInterval(changeBackground, 5000);
+      // Medicine search (filters across accordion bodies)
+      const medSearch = document.getElementById('medSearch');
+      const medClearBtn = document.getElementById('medClearBtn');
+      const medItems = Array.from(document.querySelectorAll('.accordion-item .med-grid label'));
+      if(medSearch){
+        medSearch.addEventListener('input', function(){
+          const term = this.value.trim().toLowerCase();
+          medItems.forEach(label=>{
+            const text = label.textContent.toLowerCase();
+            const shown = !term || text.includes(term);
+            label.style.display = shown ? '' : 'none';
+          });
+          // Auto-open accordions that have matches, close those without matches
+          document.querySelectorAll('.accordion-item').forEach(item=>{
+            const visible = item.querySelectorAll('.med-grid label:not([style*="display: none"])').length;
+            const body = item.querySelector('.accordion-body');
+            if(visible){ body.classList.add('open'); body.setAttribute('aria-hidden','false'); item.querySelector('.accordion-header').setAttribute('aria-expanded','true'); }
+            else { body.classList.remove('open'); body.setAttribute('aria-hidden','true'); item.querySelector('.accordion-header').setAttribute('aria-expanded','false'); }
+          });
+        });
+      }
+      if(medClearBtn){
+        medClearBtn.addEventListener('click', ()=>{
+          medSearch.value = '';
+          medItems.forEach(l=> l.style.display='');
+          document.querySelectorAll('.accordion-item .accordion-body').forEach(b=>{ b.classList.remove('open'); b.setAttribute('aria-hidden','true'); b.previousElementSibling && b.previousElementSibling.setAttribute('aria-expanded','false'); });
+          computeTotal();
+        });
+      }
+
+      // Tests - select all per category and global select
+      document.querySelectorAll('#tests .select-category').forEach(check=>{
+        check.addEventListener('change', (e)=>{
+          const container = e.target.closest('div');
+          if(!container) return;
+          const checks = container.querySelectorAll('input.test');
+          checks.forEach(c=> c.checked = e.target.checked);
+          computeTotal();
+        });
+      });
+      const selectAllGlobal = document.getElementById('selectAll');
+      if(selectAllGlobal){
+        selectAllGlobal.addEventListener('change', (e)=>{
+          document.querySelectorAll('#tests input.test').forEach(c=> c.checked = e.target.checked);
+          // also toggle category selects
+          document.querySelectorAll('#tests .select-category').forEach(s=> s.checked = e.target.checked);
+          computeTotal();
+        });
+      }
+
+      // Live total computation
+      const liveText = document.getElementById('liveText');
+      function computeTotal(){
+        try{
+          const tests = Array.from(document.querySelectorAll('input.test:checked'));
+          const meds = Array.from(document.querySelectorAll('input.price-check:checked'));
+          let total = 0;
+          const items = [];
+          tests.forEach(t=>{ const v = parseInt(t.value,10)||0; total += v; items.push({type:'Test', name:t.getAttribute('data-name')||t.closest('label')?.textContent.trim(), price:v}); });
+          meds.forEach(m=>{ const v = parseInt(m.value,10)||0; total += v; items.push({type:'Medicine', name:m.getAttribute('data-name')||m.closest('label')?.textContent.trim(), price:v}); });
+          liveText.textContent = `${items.length} selected | Total: Rs. ${total}`;
+          return {total, items};
+        }catch(e){ console.warn('computeTotal error', e); return {total:0, items:[]}; }
+      }
+
+      // Bind change listeners to update total live
+      document.querySelectorAll('input.test, input.price-check').forEach(inp=> inp.addEventListener('change', ()=>{
+        computeTotal();
+      }));
+
+      // Live total click to show modal with details
+      const liveTotalEl = document.getElementById('liveTotal');
+      const resultModal = document.getElementById('resultModal');
+      const modalContent = document.getElementById('modalContent');
+      const clearAllBtn = document.getElementById('clearAllBtn');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+
+      function openModal(){
+        const {total, items} = computeTotal();
+        if(items.length === 0){ modalContent.innerHTML = '<p>No items selected.</p>'; }
+        else{
+          let html = '<table class="details"><thead><tr><th>Type</th><th>Item</th><th style="text-align:right">Price (Rs.)</th></tr></thead><tbody>';
+          items.forEach(it=>{ html += `<tr><td>${it.type}</td><td>${escapeHtml(it.name)}</td><td style="text-align:right">${it.price}</td></tr>`; });
+          html += `<tr><td colspan="2" style="text-align:right;font-weight:700">Grand Total</td><td style="text-align:right;font-weight:700">${total}</td></tr>`;
+          html += '</tbody></table>';
+          modalContent.innerHTML = html;
+        }
+        resultModal.style.display = 'flex';
+      }
+      function closeModal(){ resultModal.style.display = 'none'; }
+
+      if(liveTotalEl){ liveTotalEl.addEventListener('click', openModal); }
+      if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if(clearAllBtn){
+        clearAllBtn.addEventListener('click', ()=>{
+          document.querySelectorAll('input.test, input.price-check').forEach(i=> i.checked = false);
+          computeTotal();
+          closeModal();
+        });
+      }
+
+      // Utility to escape HTML when rendering names
+      function escapeHtml(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+      // Modal close on click outside
+      resultModal.addEventListener('click', (e)=>{ if(e.target === resultModal) closeModal(); });
+
+      // Back to top
+      const backToTop = document.getElementById('backToTop');
+      backToTop.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+
+      // Initialize totals on load
+      computeTotal();
+
+    })();
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-  .hospital-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    padding: 3px 5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-
-  .contact-bubble {
-    display: inline-block;
-    padding: 6px 12px;
-    border-radius: 9999px;
-    background: #25D366; /* WhatsApp green */
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(37,211,102,0.35);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    line-height: 1.2;
-    min-width: 100px;
-    animation: blink 0.6s infinite;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-
-  .contact-bubble:hover {
-    background: #1ebd5a;
-  }
-
-  .contact-bubble .name {
-    display: block;
-    font-weight: 700;
-    font-size: 11px;
-    margin-bottom: 2px;
-    letter-spacing: 0.2px;
-    color: #ffffff; /* force white */
-  }
-
-  .contact-bubble .phone {
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-    font-weight: 700; /* bolder */
-    font-size: 10px;
-    background: rgba(255,255,255,0.25); /* slightly lighter pill */
-    padding: 3px 6px;
-    border-radius: 9999px;
-    margin-bottom: 2px;
-    color: #ffffff; /* force white text */
-  }
-
-  .contact-bubble .phone i {
-    color: #ffffff; /* white WhatsApp icon */
-    font-size: 11px;
-  }
-
-  .contact-bubble .label {
-    display: block;
-    font-size: 9px;
-    font-weight: 600;
-    opacity: 0.95;
-    animation: blink-alternate 0.6s infinite;
-    color: #ffffff;
-  }
-
-  @keyframes blink {
-    0%, 49% { opacity: 1; }
-    50%, 100% { opacity: 0.3; }
-  }
-
-  @keyframes blink-alternate {
-    0%, 49% { opacity: 0.3; }
-    50%, 100% { opacity: 1; }
-  }
-
-  body {
-    padding-top: 55px;
-  }
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  const header = document.createElement("div");
-  header.className = "hospital-header";
-
-  const badge = document.createElement("a");
-  badge.className = "contact-bubble";
-  badge.href = "https://wa.me/923004461365";
-  badge.target = "_blank";
-
-  badge.innerHTML = `
-    <span class="name">SAEED AHMAD</span>
-    <span class="phone">
-      <i class="fab fa-whatsapp"></i> 0300-4461365
-    </span>
-    <span class="label">Chat on WhatsApp</span>
-  `;
-
-  header.appendChild(badge);
-  document.body.insertBefore(header, document.body.firstChild);
-});
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
+;
+     
